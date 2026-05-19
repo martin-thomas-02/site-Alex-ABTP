@@ -1,0 +1,1588 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Terrassement Melun (77) — ABTP, le patron sur le chantier</title>
+<meta name="description" content="Terrassement, assainissement, pavage à Melun et sud Seine-et-Marne. Devis sous 48h, évacuation des gravats incluse, pas de sous-traitance. ABTP — Alexandre Bossée." />
+<meta name="theme-color" content="#1A1A1A" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:title" content="ABTP — Terrassement & aménagement extérieur en Brie (77)" />
+<meta property="og:description" content="Le patron sur le chantier. Devis sous 48h, zéro sous-traitance. Melun et sud Seine-et-Marne." />
+<meta property="og:url" content="https://abtp77.fr/" />
+<meta property="og:image" content="https://abtp77.fr/og.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ABTP — Terrassement Melun (77)" />
+<meta name="twitter:description" content="Le patron sur le chantier. Devis sous 48h." />
+
+<!-- Favicon (logo ABTP simplifié, jaune) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231A1A1A'/%3E%3Ctext x='32' y='42' font-family='Arial Black,sans-serif' font-size='26' font-weight='900' text-anchor='middle' fill='%23FFC72C'%3EA%3C/text%3E%3C/svg%3E" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          abtp: {
+            yellow:     '#FFC72C',
+            yellowSoft: '#FFE066',
+            blue:       '#3B82C4',
+            charcoal:   '#1A1A1A',
+            steel:      '#4A4A4A',
+            light:      '#F5F5F5',
+            whatsapp:   '#25D366',
+          },
+        },
+        fontFamily: {
+          display: ['Oswald', 'Arial Narrow', 'sans-serif'],
+          sans:    ['Inter', 'system-ui', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root{
+    --abtp-yellow:      #FFC72C;
+    --abtp-yellow-soft: #FFE066;
+    --abtp-blue:        #3B82C4;
+    --abtp-charcoal:    #1A1A1A;
+    --abtp-steel:       #4A4A4A;
+    --abtp-light:       #F5F5F5;
+    --abtp-whatsapp:    #25D366;
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--abtp-charcoal); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1,h2,h3,h4,.font-display{ font-family:'Oswald', 'Arial Narrow', sans-serif; letter-spacing:0.02em; text-transform:uppercase; }
+  .h-shadow { text-shadow: 0 2px 0 rgba(0,0,0,0.25); }
+
+  /* Focus visible AA */
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--abtp-yellow);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Blueprint grid background */
+  .blueprint{
+    background-color: var(--abtp-charcoal);
+    background-image:
+      linear-gradient(rgba(59,130,196,0.10) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59,130,196,0.10) 1px, transparent 1px),
+      linear-gradient(rgba(59,130,196,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59,130,196,0.05) 1px, transparent 1px);
+    background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+  }
+
+  /* Diagonal warning stripes */
+  .stripes{
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--abtp-yellow) 0 14px,
+      #111 14px 28px
+    );
+  }
+
+  /* Slider styling — yellow signal */
+  input[type=range].abtp-slider{
+    -webkit-appearance:none; appearance:none;
+    width:100%; height:6px; border-radius:9999px;
+    background: linear-gradient(to right, var(--abtp-yellow) 0%, var(--abtp-yellow) var(--pct,50%), #333 var(--pct,50%), #333 100%);
+    outline:none;
+  }
+  input[type=range].abtp-slider::-webkit-slider-thumb{
+    -webkit-appearance:none; appearance:none;
+    width:26px; height:26px; border-radius:50%;
+    background: var(--abtp-yellow);
+    border: 3px solid #1A1A1A;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    cursor:pointer; transition: transform .15s ease;
+  }
+  input[type=range].abtp-slider::-webkit-slider-thumb:hover{ transform: scale(1.1); }
+  input[type=range].abtp-slider::-moz-range-thumb{
+    width:26px; height:26px; border-radius:50%;
+    background: var(--abtp-yellow); border: 3px solid #1A1A1A;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    cursor:pointer;
+  }
+
+  /* Animated counters */
+  .num-tile { font-variant-numeric: tabular-nums; }
+  .num-tile .val { transition: color .2s; }
+  .num-tile.bump .val { color: var(--abtp-yellow-soft); }
+
+  /* Card radio (calculateur) */
+  .opt{
+    position:relative; cursor:pointer; transition: all .15s ease;
+    border: 2px solid #2a2a2a; background:#1f1f1f;
+  }
+  .opt:hover{ border-color:#555; transform: translateY(-1px); }
+  .opt.is-active{
+    border-color: var(--abtp-yellow);
+    background: linear-gradient(180deg, rgba(255,199,44,0.10), rgba(255,199,44,0));
+    box-shadow: inset 0 0 0 1px var(--abtp-yellow);
+  }
+  .opt.is-active .opt-dot{ background:var(--abtp-yellow); border-color:var(--abtp-yellow); }
+  .opt.is-active .opt-dot::after{ opacity:1; transform:scale(1); }
+  .opt-dot{
+    width:18px; height:18px; border-radius:50%; border:2px solid #555;
+    display:inline-flex; align-items:center; justify-content:center; background:#0e0e0e;
+  }
+  .opt-dot::after{
+    content:''; width:8px; height:8px; border-radius:50%; background:#1A1A1A;
+    opacity:0; transform:scale(0); transition: all .15s ease;
+  }
+
+  /* Benne fill animation */
+  .benne-fill{ transition: y .6s cubic-bezier(.2,.7,.2,1), height .6s cubic-bezier(.2,.7,.2,1); }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  /* Tag pills */
+  .tag{
+    display:inline-flex; align-items:center; gap:.4rem;
+    padding:.3rem .65rem; border-radius:.5rem;
+    background:#fff; color:var(--abtp-charcoal);
+    border:1px solid #e5e5e5; font-weight:600; font-size:.85rem;
+  }
+
+  /* CTA hover */
+  .cta-yellow{ background:var(--abtp-yellow); color:#1A1A1A; transition: all .15s ease; }
+  .cta-yellow:hover{ background:var(--abtp-yellow-soft); transform: translateY(-1px); }
+  .cta-yellow:active{ transform: translateY(0); }
+
+  /* Section spy active */
+  .nav-link[aria-current="true"]{ color: var(--abtp-yellow); }
+
+  /* Map pin pulse */
+  @keyframes pulse-ring {
+    0%{ transform: scale(0.8); opacity: 0.6; }
+    100%{ transform: scale(2.5); opacity: 0; }
+  }
+  .pin-ring{ transform-origin: center; animation: pulse-ring 2.4s ease-out infinite; }
+
+  /* Helpers */
+  .max-w-prose-tight{ max-width: 56ch; }
+
+  /* Sticky mobile call bar (deux moitiés : Appeler + WhatsApp) */
+
+  /* Details/summary chrome */
+  details.legal > summary{ list-style:none; cursor:pointer; }
+  details.legal > summary::-webkit-details-marker{ display:none; }
+  details.legal[open] .chev{ transform: rotate(180deg); }
+  .chev{ transition: transform .2s ease; }
+
+  /* Scroll reveal — entrée en mouvement, alternance gauche/droite */
+  .reveal{
+    opacity:0;
+    transition: opacity .75s cubic-bezier(.22,.61,.36,1),
+                transform .75s cubic-bezier(.22,.61,.36,1);
+    will-change: opacity, transform;
+  }
+  .reveal-left  { transform: translateX(-56px); }
+  .reveal-right { transform: translateX(56px); }
+  .reveal-up    { transform: translateY(40px); }
+  .reveal.is-visible{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1 !important; transform:none !important; }
+  }
+</style>
+
+<!-- Schema.org LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://abtp77.fr/#business",
+  "name": "ABTP",
+  "image": "https://abtp77.fr/og.jpg",
+  "telephone": "+33782408809",
+  "email": "alexandre.bossee.abtp@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8 Square de Beauregard",
+    "postalCode": "77000",
+    "addressLocality": "Melun",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 48.5409, "longitude": 2.6601 },
+  "areaServed": [
+    {"@type": "City", "name": "Melun"},
+    {"@type": "City", "name": "Brie-Comte-Robert"},
+    {"@type": "City", "name": "Chaumes-en-Brie"},
+    {"@type": "City", "name": "Le Châtelet-en-Brie"},
+    {"@type": "City", "name": "Saint-Ouen-en-Brie"},
+    {"@type": "City", "name": "Nangis"},
+    {"@type": "City", "name": "Mormant"},
+    {"@type": "City", "name": "Fontainebleau"},
+    {"@type": "City", "name": "Provins"},
+    {"@type": "City", "name": "Coulommiers"},
+    {"@type": "City", "name": "Maincy"},
+    {"@type": "City", "name": "Sivry-Courtry"},
+    {"@type": "City", "name": "Vaux-le-Pénil"},
+    {"@type": "City", "name": "Dammarie-lès-Lys"},
+    {"@type": "City", "name": "Le Mée-sur-Seine"},
+    {"@type": "City", "name": "Tournan-en-Brie"},
+    {"@type": "City", "name": "Combs-la-Ville"},
+    {"@type": "City", "name": "Lieusaint"},
+    {"@type": "City", "name": "Savigny-le-Temple"},
+    {"@type": "City", "name": "Vert-Saint-Denis"}
+  ],
+  "priceRange": "€€",
+  "openingHours": "Mo-Sa 07:00-19:00",
+  "founder": {"@type": "Person", "name": "Alexandre Bossée"}
+}
+</script>
+</head>
+
+<body class="bg-white text-abtp-charcoal">
+
+<!-- Skip link -->
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-abtp-yellow focus:text-abtp-charcoal focus:px-3 focus:py-2 focus:rounded-md focus:font-semibold">Aller au contenu</a>
+
+<!-- ============================================================= -->
+<!-- 1. HEADER                                                     -->
+<!-- ============================================================= -->
+<header class="fixed top-0 inset-x-0 z-40 bg-abtp-charcoal/95 backdrop-blur border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-18 flex items-center justify-between gap-4">
+
+    <!-- Logo SVG inline -->
+    <a href="#top" class="flex items-center gap-2.5 group" aria-label="ABTP — accueil">
+      <svg viewBox="0 0 64 64" width="40" height="40" class="shrink-0" aria-hidden="true">
+        <rect x="2" y="2" width="60" height="60" rx="10" fill="#FFC72C"/>
+        <rect x="2" y="2" width="60" height="60" rx="10" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+        <text x="32" y="44" font-family="Oswald, Arial Black, sans-serif" font-weight="700" font-size="30" text-anchor="middle" fill="#1A1A1A">A</text>
+      </svg>
+      <span class="text-white font-display text-2xl tracking-wider">ABTP</span>
+      <span class="hidden sm:inline-block h-5 w-px bg-white/20 mx-1"></span>
+      <span class="hidden sm:inline-block text-xs text-white/60 font-medium leading-tight">
+        Terrassement<br/>Melun · 77
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden lg:flex items-center gap-7 text-white/80 text-sm font-medium" aria-label="Navigation principale">
+      <a class="nav-link hover:text-white" href="#services">Services</a>
+      <a class="nav-link hover:text-white" href="#calculateur">Calculateur</a>
+      <a class="nav-link hover:text-white" href="#avant-apres">Réalisations</a>
+      <a class="nav-link hover:text-white" href="#pourquoi">Pourquoi ABTP</a>
+      <a class="nav-link hover:text-white" href="#zone">Zone</a>
+      <a class="nav-link hover:text-white" href="#processus">Processus</a>
+      <a class="nav-link hover:text-white" href="#contact">Contact</a>
+    </nav>
+
+    <!-- Phone CTA always visible -->
+    <a href="tel:0782408809" class="cta-yellow rounded-md font-semibold text-sm md:text-base px-3 md:px-4 py-2 md:py-2.5 flex items-center gap-2" aria-label="Appeler ABTP au 07 82 40 88 09">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="hidden sm:inline">07 82 40 88 09</span>
+      <span class="sm:hidden">Appeler</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================================================= -->
+<!-- 2. HERO                                                       -->
+<!-- ============================================================= -->
+<section id="top" class="blueprint relative pt-24 md:pt-28 pb-16 md:pb-24 overflow-hidden">
+  <!-- Stripe accent -->
+  <div class="absolute top-16 md:top-18 left-0 right-0 h-2 stripes opacity-90"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+
+      <!-- Left: copy -->
+      <div class="lg:col-span-7 text-white">
+        <div class="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-md bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/40">
+          <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+          <span class="font-display text-xs tracking-widest">DISPONIBLE CETTE SEMAINE · RAPPEL SOUS 1H OUVRÉ</span>
+        </div>
+
+        <h1 class="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.02] mb-5">
+          Votre chantier,<br/>
+          du terrain brut<br/>
+          <span class="text-abtp-yellow">à la finition.</span>
+        </h1>
+
+        <p class="text-white/80 text-lg md:text-xl max-w-prose-tight mb-8">
+          ABTP intervient à Melun et dans tout le sud Seine-et-Marne. Devis sous 48h, zéro sous-traitance.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8">
+
+          <!-- CTA principal : calculateur -->
+          <a href="#calculateur" class="cta-yellow rounded-md font-display text-lg tracking-wider px-6 py-4 inline-flex items-center justify-center gap-2 shadow-lg">
+            Estimer mon chantier en 30 secondes
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+
+          <!-- CTA secondaire : WhatsApp uniquement (le téléphone est déjà dans le header + sticky bottom mobile) -->
+          <a href="https://wa.me/33782408809" class="rounded-md px-6 py-4 inline-flex items-center justify-center gap-2 bg-[#25D366] text-white border border-[#25D366] hover:bg-[#1FB855] font-semibold transition" aria-label="Écrire à ABTP sur WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01A7.94 7.94 0 0 0 17.6 6.32zM12.05 18.5h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.65.67-2.43-.16-.25a6.6 6.6 0 1 1 12.24-3.49 6.6 6.6 0 0 1-6.64 6.58zm3.62-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.62.77-.12.13-.23.15-.42.05-.2-.1-.83-.31-1.59-.98-.59-.52-.98-1.17-1.1-1.37-.11-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34l-.39-.01a.74.74 0 0 0-.54.25c-.18.2-.7.69-.7 1.67 0 .98.72 1.94.82 2.07.1.13 1.42 2.17 3.44 3.04.48.21.86.33 1.15.43.48.15.92.13 1.26.08.39-.06 1.17-.48 1.34-.94.16-.46.16-.86.12-.94-.05-.08-.18-.13-.38-.23z"/>
+            </svg>
+            Écrire sur WhatsApp
+          </a>
+        </div>
+
+        <!-- Trust strip -->
+        <ul class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-sm text-white/80 pt-6 border-t border-white/10">
+          <li class="flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFC72C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Devis sous 48h
+          </li>
+          <li class="flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFC72C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Évacuation incluse
+          </li>
+          <li class="flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFC72C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Zéro sous-traitance
+          </li>
+          <li class="flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFC72C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Garantie décennale
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: hero visual (photo réelle) -->
+      <div class="lg:col-span-5 reveal reveal-right">
+        <figure class="relative aspect-[4/5] sm:aspect-[5/5] lg:aspect-[4/5] rounded-lg overflow-hidden border border-white/10 bg-abtp-charcoal shadow-2xl">
+          <img
+            src="photos/photo%20ent%C3%AAte.jpg"
+            alt="Chantier ABTP en cours — Melun, Seine-et-Marne"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="eager"
+            fetchpriority="high"
+          />
+          <!-- Léger voile pour lisibilité du tag -->
+          <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+          <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2 text-[11px] font-mono text-white">
+            <span class="bg-abtp-yellow text-abtp-charcoal px-2 py-1 rounded-md font-semibold tracking-wider">ABTP · CHANTIER</span>
+            <span class="text-white/70">Melun · 77</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom stripe -->
+  <div class="absolute bottom-0 left-0 right-0 h-2 stripes opacity-90"></div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 3. SERVICES                                                   -->
+<!-- ============================================================= -->
+<section id="services" class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-3xl mb-10 md:mb-14 reveal reveal-up">
+      <p class="font-display tracking-widest text-abtp-blue text-sm mb-3">— Services</p>
+      <h2 class="font-display text-4xl md:text-5xl text-abtp-charcoal mb-4">Ce qu'on fait, on le fait soi-même.</h2>
+      <p class="text-abtp-steel text-lg">Six métiers, une seule équipe. Du décaissement au pavage fini, de la fosse à l'évacuation. Pas de relais, pas de coordinateur, pas de surprise.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 reveal-group">
+
+      <!-- Card template -->
+      <article class="group rounded-lg border border-neutral-200 bg-white p-6 shadow-sm hover:border-abtp-charcoal hover:shadow-md transition-all">
+        <div class="w-12 h-12 rounded-lg bg-abtp-yellow flex items-center justify-center mb-5">
+          <!-- excavator icon -->
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h13l2-4"/><path d="M16 14V8h-4l-4 6"/><circle cx="6" cy="20" r="2"/><circle cx="14" cy="20" r="2"/><path d="M12 8l5-3 3 4-5 3"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-abtp-charcoal mb-2">Terrassement</h3>
+        <p class="text-abtp-steel">Décaissement, nivellement, fouilles en rigole — pour fondations, piscines, viabilisation.</p>
+      </article>
+
+      <article class="group rounded-lg border border-neutral-200 bg-white p-6 shadow-sm hover:border-abtp-charcoal hover:shadow-md transition-all">
+        <div class="w-12 h-12 rounded-lg bg-abtp-yellow flex items-center justify-center mb-5">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v6"/><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 12v4M15 12v4"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-abtp-charcoal mb-2">Assainissement</h3>
+        <p class="text-abtp-steel">Raccordement tout-à-l'égout, fosses toutes eaux, drainage, eaux pluviales.</p>
+      </article>
+
+      <article class="group rounded-lg border border-neutral-200 bg-white p-6 shadow-sm hover:border-abtp-charcoal hover:shadow-md transition-all">
+        <div class="w-12 h-12 rounded-lg bg-abtp-yellow flex items-center justify-center mb-5">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l4-12 14-2-4 14z"/><path d="M7 9l14-2M11 21l4-14M3 21h18"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-abtp-charcoal mb-2">Création d'allée</h3>
+        <p class="text-abtp-steel">Allées en pavé, dalles, graviers stabilisés — du tracé à la finition.</p>
+      </article>
+
+      <article class="group rounded-lg border border-neutral-200 bg-white p-6 shadow-sm hover:border-abtp-charcoal hover:shadow-md transition-all">
+        <div class="w-12 h-12 rounded-lg bg-abtp-yellow flex items-center justify-center mb-5">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-7 9 7v8H3z"/><path d="M9 20v-6h6v6"/><path d="M3 12h18"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-abtp-charcoal mb-2">Aménagement extérieur</h3>
+        <p class="text-abtp-steel">Cours, terrasses, abords, mise en forme du terrain.</p>
+      </article>
+
+      <article class="group rounded-lg border border-neutral-200 bg-white p-6 shadow-sm hover:border-abtp-charcoal hover:shadow-md transition-all">
+        <div class="w-12 h-12 rounded-lg bg-abtp-yellow flex items-center justify-center mb-5">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="4"/><rect x="3" y="10" width="18" height="4"/><rect x="3" y="16" width="18" height="4"/><line x1="9" y1="4" x2="9" y2="20"/><line x1="15" y1="4" x2="15" y2="20"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-abtp-charcoal mb-2">Maçonnerie</h3>
+        <p class="text-abtp-steel">Murets, dalles béton, soutènement, petits ouvrages d'abord.</p>
+      </article>
+
+      <article class="group rounded-lg border-2 border-abtp-yellow bg-abtp-charcoal p-6 shadow-sm hover:shadow-md transition-all relative overflow-hidden">
+        <div class="absolute -top-1 -right-1 stripes h-3 w-24 rotate-12 opacity-80"></div>
+        <div class="w-12 h-12 rounded-lg bg-abtp-yellow flex items-center justify-center mb-5">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 17h11l1-7H4l-2 7z"/><path d="M14 10h5l3 4v3h-8"/><circle cx="7" cy="19" r="2"/><circle cx="17" cy="19" r="2"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl text-white mb-2">Évacuation des gravats</h3>
+        <p class="text-white/75">Bennes en propre, évacuation directe vers la décharge agréée. Pas de surcoût loueur.</p>
+        <p class="mt-3 inline-flex items-center gap-1.5 text-xs text-abtp-yellow font-display tracking-wider">INCLUS DANS LE DEVIS</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 4. CALCULATEUR DE BENNES                                      -->
+<!-- ============================================================= -->
+<section id="calculateur" class="py-16 md:py-24 bg-abtp-light relative">
+  <!-- Stripe accents -->
+  <div class="absolute top-0 left-0 right-0 h-1.5 stripes"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-3xl mb-8 md:mb-12">
+      <p class="font-display tracking-widest text-abtp-blue text-sm mb-3">— Calculateur</p>
+      <h2 class="font-display text-4xl md:text-5xl text-abtp-charcoal mb-4">Estimez votre chantier en 30 secondes</h2>
+      <p class="text-abtp-steel text-lg">Volume à terrasser, nombre de bennes, fourchette de prix. Vous gardez les chiffres, on s'occupe du reste.</p>
+    </div>
+
+    <!-- Console card -->
+    <div class="max-w-5xl mx-auto rounded-lg bg-abtp-charcoal text-white shadow-xl ring-1 ring-black/5 overflow-hidden">
+
+      <!-- Console header -->
+      <div class="px-5 md:px-8 py-4 flex items-center justify-between gap-3 border-b border-white/10">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-abtp-yellow"></span>
+          <span class="font-display tracking-widest text-sm text-white/80">CONSOLE CHANTIER · v1</span>
+        </div>
+        <span class="hidden sm:inline-block text-[11px] font-mono text-white/40">ABTP-CALC.001</span>
+      </div>
+
+      <div class="p-5 md:p-8 grid lg:grid-cols-5 gap-6 lg:gap-8">
+
+        <!-- LEFT: inputs (3 cols) -->
+        <div class="lg:col-span-3 space-y-7">
+
+          <!-- Step 1: type -->
+          <div>
+            <div class="flex items-baseline justify-between mb-3">
+              <h3 class="font-display text-lg text-white"><span class="text-abtp-yellow mr-2">01.</span>Type de chantier</h3>
+            </div>
+            <div id="type-grid" class="grid grid-cols-2 md:grid-cols-3 gap-2.5"></div>
+          </div>
+
+          <!-- Step 2: surface -->
+          <div>
+            <div class="flex items-baseline justify-between mb-3">
+              <h3 class="font-display text-lg text-white"><span class="text-abtp-yellow mr-2">02.</span>Surface</h3>
+              <div class="flex items-center gap-2">
+                <input id="surface-num" type="number" min="5" max="500" step="5" value="50" inputmode="numeric"
+                       class="w-20 bg-black/40 border border-white/15 rounded-md px-2 py-1 text-right font-mono text-abtp-yellow focus:border-abtp-yellow" />
+                <span class="text-white/60 text-sm">m²</span>
+              </div>
+            </div>
+            <input id="surface" type="range" min="5" max="500" step="5" value="50" class="abtp-slider" aria-label="Surface en mètres carrés"/>
+            <div class="flex justify-between text-[11px] font-mono text-white/40 mt-1.5">
+              <span>5 m²</span><span>500 m²</span>
+            </div>
+          </div>
+
+          <!-- Step 3: depth -->
+          <div>
+            <div class="flex items-baseline justify-between mb-3">
+              <h3 class="font-display text-lg text-white"><span class="text-abtp-yellow mr-2">03.</span>Profondeur</h3>
+              <div class="flex items-center gap-2">
+                <input id="depth-num" type="number" min="10" max="300" step="5" value="30" inputmode="numeric"
+                       class="w-20 bg-black/40 border border-white/15 rounded-md px-2 py-1 text-right font-mono text-abtp-yellow focus:border-abtp-yellow" />
+                <span class="text-white/60 text-sm">cm</span>
+              </div>
+            </div>
+            <input id="depth" type="range" min="10" max="300" step="5" value="30" class="abtp-slider" aria-label="Profondeur en centimètres"/>
+            <div class="flex justify-between text-[11px] font-mono text-white/40 mt-1.5">
+              <span>10 cm</span><span>3,00 m</span>
+            </div>
+          </div>
+
+          <!-- Step 4: soil -->
+          <div>
+            <div class="flex items-baseline justify-between mb-3">
+              <h3 class="font-display text-lg text-white"><span class="text-abtp-yellow mr-2">04.</span>Type de sol</h3>
+            </div>
+            <div id="soil-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-2.5"></div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: results (2 cols) -->
+        <div class="lg:col-span-2">
+          <div id="results" class="rounded-lg bg-black/40 border border-white/10 p-5">
+            <p class="font-display tracking-widest text-xs text-white/50 mb-4">— Résultats</p>
+
+            <!-- Tiles -->
+            <div class="space-y-3">
+              <div class="num-tile rounded-md bg-white/5 border border-white/10 p-4">
+                <p class="text-[11px] font-mono uppercase tracking-widest text-white/50">Volume à évacuer</p>
+                <p class="mt-1"><span id="r-volume" class="val font-display text-4xl text-white">0</span> <span class="text-abtp-yellow font-display text-2xl">m³</span></p>
+                <p class="text-[11px] text-white/40">terre foisonnée</p>
+              </div>
+
+              <div class="num-tile rounded-md bg-white/5 border border-white/10 p-4">
+                <p class="text-[11px] font-mono uppercase tracking-widest text-white/50">Bennes</p>
+                <p id="r-bennes" class="val mt-1 font-display text-xl text-white leading-tight">—</p>
+                <p id="r-rotations" class="text-[11px] text-white/40">— rotations</p>
+              </div>
+
+              <div class="num-tile rounded-md bg-white/5 border border-white/10 p-4">
+                <p class="text-[11px] font-mono uppercase tracking-widest text-white/50">Fourchette devis</p>
+                <p class="mt-1"><span id="r-price-low" class="val font-display text-3xl text-white">0</span> <span class="text-white/40">—</span> <span id="r-price-high" class="val font-display text-3xl text-abtp-yellow">0</span> <span class="text-abtp-yellow font-display text-xl">€</span></p>
+                <p class="text-[11px] text-white/40">HT, hors fournitures</p>
+              </div>
+
+              <div class="rounded-md bg-white/5 border border-white/10 p-4">
+                <p class="text-[11px] font-mono uppercase tracking-widest text-white/50">Durée estimée</p>
+                <p class="mt-1"><span id="r-duree" class="font-display text-2xl text-white">0</span> <span class="text-white/60">jours de chantier</span></p>
+              </div>
+            </div>
+
+            <p id="r-warn" class="hidden mt-4 text-xs text-amber-300 bg-amber-300/10 border border-amber-300/20 rounded-md px-3 py-2">
+              Augmentez la surface ou la profondeur pour obtenir une estimation.
+            </p>
+
+            <p class="mt-4 text-[11px] text-white/45 leading-relaxed">
+              Estimation indicative HT, hors évacuation en décharge classée et hors fournitures. Sans valeur contractuelle. Le devis d'Alexandre seul fait foi.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bennes visualisation -->
+      <div class="px-5 md:px-8 pb-2">
+        <div class="rounded-lg bg-black/30 border border-white/10 p-5">
+          <div class="flex items-baseline justify-between mb-4 gap-2 flex-wrap">
+            <p class="font-display tracking-widest text-xs text-white/50">— Bennes nécessaires</p>
+            <p id="bennes-readout" class="font-mono text-xs text-abtp-yellow">remplissage : 0 %</p>
+          </div>
+          <div id="bennes-svg-wrap" class="overflow-x-auto">
+            <!-- bennes rendered by JS -->
+          </div>
+          <p class="mt-3 text-[11px] text-white/40 font-mono">Format : Nx benne X m³ = Y rotations 114</p>
+        </div>
+      </div>
+
+      <!-- Final CTA -->
+      <div class="px-5 md:px-8 pb-8 pt-2">
+        <button id="open-form" type="button" class="cta-yellow w-full rounded-md font-display tracking-wider text-lg md:text-xl py-5 inline-flex items-center justify-center gap-3 shadow-lg">
+          Obtenir le vrai devis sous 48h
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <p class="mt-3 text-center text-[11px] text-white/45 leading-relaxed max-w-2xl mx-auto">
+          Estimation indicative pour information. Le devis officiel d'Alexandre prend en compte l'accès chantier, les évacuations imposées, les terrassements en finition manuelle, et reste seul contractuel.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 5. AVANT / APRÈS (slider drag)                                -->
+<!-- ============================================================= -->
+<section id="avant-apres" class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-3xl mb-10 md:mb-14 reveal reveal-up">
+      <p class="font-display tracking-widest text-abtp-blue text-sm mb-3">— Réalisations</p>
+      <h2 class="font-display text-4xl md:text-5xl text-abtp-charcoal mb-4">Avant / Après : le terrain ne ment pas.</h2>
+      <p class="text-abtp-steel text-lg">Faites glisser le curseur pour voir la transformation.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 reveal-group">
+
+      <!-- Chantier 1 -->
+      <article class="before-after group rounded-lg border border-neutral-200 bg-white shadow-sm overflow-hidden">
+        <div class="ba-wrap relative aspect-[4/3] bg-abtp-charcoal overflow-hidden">
+          <div class="ba-before absolute inset-0">
+            <img src="photos/chemin%20avant.jpg" alt="Chemin d'accès avant intervention ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="ba-after absolute inset-0" style="clip-path: inset(0 0 0 50%);">
+            <img src="photos/chemin%20apr%C3%A8s.jpg" alt="Chemin d'accès après réalisation ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          </div>
+          <!-- Slider handle -->
+          <div class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg pointer-events-none" style="left: 50%;">
+            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
+            </div>
+          </div>
+          <!-- Input range invisible mais cliquable -->
+          <input type="range" min="0" max="100" value="50" class="ba-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize" aria-label="Glisser pour comparer avant et après" />
+          <!-- Badges -->
+          <span class="absolute top-3 left-3 bg-abtp-charcoal/80 text-white text-[10px] font-mono px-2 py-1 rounded">AVANT</span>
+          <span class="absolute top-3 right-3 bg-abtp-yellow text-abtp-charcoal text-[10px] font-mono px-2 py-1 rounded">APRÈS</span>
+        </div>
+        <div class="p-4">
+          <h3 class="font-display text-lg text-abtp-charcoal mb-1">Création de chemin d'accès</h3>
+          <p class="text-sm text-abtp-steel">Terrassement, stabilisation et finition · Seine-et-Marne (77)</p>
+        </div>
+      </article>
+
+      <!-- Chantier 2 -->
+      <article class="before-after group rounded-lg border border-neutral-200 bg-white shadow-sm overflow-hidden">
+        <div class="ba-wrap relative aspect-[4/3] bg-abtp-charcoal overflow-hidden">
+          <div class="ba-before absolute inset-0">
+            <img src="photos/devant%20maison%20avant.jpg" alt="Devant de maison avant intervention ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="ba-after absolute inset-0" style="clip-path: inset(0 0 0 50%);">
+            <img src="photos/devant%20maison%20apr%C3%A8s.jpg" alt="Devant de maison après réalisation ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg pointer-events-none" style="left: 50%;">
+            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
+            </div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize" aria-label="Glisser pour comparer avant et après" />
+          <span class="absolute top-3 left-3 bg-abtp-charcoal/80 text-white text-[10px] font-mono px-2 py-1 rounded">AVANT</span>
+          <span class="absolute top-3 right-3 bg-abtp-yellow text-abtp-charcoal text-[10px] font-mono px-2 py-1 rounded">APRÈS</span>
+        </div>
+        <div class="p-4">
+          <h3 class="font-display text-lg text-abtp-charcoal mb-1">Aménagement devant de maison</h3>
+          <p class="text-sm text-abtp-steel">Décaissement, mise en forme et finition des abords · Seine-et-Marne (77)</p>
+        </div>
+      </article>
+
+      <!-- Chantier 3 -->
+      <article class="before-after group rounded-lg border border-neutral-200 bg-white shadow-sm overflow-hidden">
+        <div class="ba-wrap relative aspect-[4/3] bg-abtp-charcoal overflow-hidden">
+          <div class="ba-before absolute inset-0">
+            <img src="photos/terrasse%20avant.jpg" alt="Terrasse avant intervention ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="ba-after absolute inset-0" style="clip-path: inset(0 0 0 50%);">
+            <img src="photos/terrasse%20apr%C3%A8s.jpg" alt="Terrasse après réalisation ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg pointer-events-none" style="left: 50%;">
+            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
+            </div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize" aria-label="Glisser pour comparer avant et après" />
+          <span class="absolute top-3 left-3 bg-abtp-charcoal/80 text-white text-[10px] font-mono px-2 py-1 rounded">AVANT</span>
+          <span class="absolute top-3 right-3 bg-abtp-yellow text-abtp-charcoal text-[10px] font-mono px-2 py-1 rounded">APRÈS</span>
+        </div>
+        <div class="p-4">
+          <h3 class="font-display text-lg text-abtp-charcoal mb-1">Création de terrasse</h3>
+          <p class="text-sm text-abtp-steel">Préparation du sol, pose et finition · Seine-et-Marne (77)</p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Note honnête -->
+    <p class="text-sm text-abtp-steel mt-8 max-w-2xl">
+      <span class="font-semibold text-abtp-charcoal">Note :</span> ABTP est une jeune entreprise (créée en 2025) — ces réalisations sont parmi les premières d'une longue série. <a href="#contact" class="text-abtp-blue underline decoration-2 underline-offset-2">Soyez le prochain chantier à témoigner →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 6. POURQUOI ABTP                                              -->
+<!-- ============================================================= -->
+<section id="pourquoi" class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-3xl mb-10 md:mb-14 reveal reveal-up">
+      <p class="font-display tracking-widest text-abtp-blue text-sm mb-3">— Pourquoi ABTP</p>
+      <h2 class="font-display text-4xl md:text-5xl text-abtp-charcoal mb-4">Trois choses qui changent tout sur un chantier.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5 reveal-group">
+
+      <article class="rounded-lg border border-neutral-200 bg-white p-7 shadow-sm">
+        <div class="flex items-start justify-between mb-5">
+          <span class="font-display text-7xl text-abtp-yellow leading-none">01</span>
+          <span class="tag border-abtp-charcoal">VRD</span>
+        </div>
+        <h3 class="font-display text-2xl text-abtp-charcoal mb-3">Formé chez WIAME VRD</h3>
+        <p class="text-abtp-steel">Avant ABTP, Alexandre a travaillé sur les grands chantiers de VRD d'Île-de-France. Les méthodes des pros, appliquées chez vous.</p>
+      </article>
+
+      <article class="rounded-lg border border-neutral-200 bg-abtp-charcoal text-white p-7 shadow-sm">
+        <div class="flex items-start justify-between mb-5">
+          <span class="font-display text-7xl text-abtp-yellow leading-none">02</span>
+          <span class="tag !bg-abtp-yellow !text-abtp-charcoal !border-abtp-yellow">SARL</span>
+        </div>
+        <h3 class="font-display text-2xl mb-3">Le patron au volant</h3>
+        <p class="text-white/75">Pas de sous-traitance, pas d'intermédiaire. Le devis, le chantier, le suivi — toujours la même personne en face de vous.</p>
+      </article>
+
+      <article class="rounded-lg border border-neutral-200 bg-white p-7 shadow-sm">
+        <div class="flex items-start justify-between mb-5">
+          <span class="font-display text-7xl text-abtp-yellow leading-none">03</span>
+          <span class="tag border-abtp-charcoal">DEVIS 48H</span>
+        </div>
+        <h3 class="font-display text-2xl text-abtp-charcoal mb-3">Devis clair, sous 48h</h3>
+        <p class="text-abtp-steel">Visite gratuite du chantier, devis détaillé par poste, sans surprise ni mention floue. Vous savez exactement ce que vous payez avant de signer.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 7. ZONE D'INTERVENTION                                        -->
+<!-- ============================================================= -->
+<section id="zone" class="py-16 md:py-24 bg-abtp-light">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-3xl mb-10 md:mb-14">
+      <p class="font-display tracking-widest text-abtp-blue text-sm mb-3">— Zone d'intervention</p>
+      <h2 class="font-display text-4xl md:text-5xl text-abtp-charcoal mb-4">Nous intervenons partout en Brie et sud Seine-et-Marne</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-8 items-start">
+
+      <!-- Map -->
+      <div class="lg:col-span-7">
+        <div class="rounded-lg bg-white border border-neutral-200 p-4 md:p-6 shadow-sm">
+          <svg viewBox="0 0 600 520" class="w-full h-auto" role="img" aria-label="Carte simplifiée du département de Seine-et-Marne avec les communes desservies par ABTP">
+            <defs>
+              <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="6" stroke="#FFC72C" stroke-width="1.5" opacity="0.35"/>
+              </pattern>
+            </defs>
+
+            <!-- 77 simplified silhouette -->
+            <path d="M 90 70 L 240 50 L 360 90 L 480 80 L 510 170 L 490 260 L 520 360 L 460 450 L 380 470 L 280 460 L 200 480 L 130 440 L 80 360 L 70 270 L 60 180 Z"
+                  fill="url(#hatch)" stroke="#1A1A1A" stroke-width="2.5" stroke-linejoin="round"/>
+
+            <!-- Inner boundary echo -->
+            <path d="M 90 70 L 240 50 L 360 90 L 480 80 L 510 170 L 490 260 L 520 360 L 460 450 L 380 470 L 280 460 L 200 480 L 130 440 L 80 360 L 70 270 L 60 180 Z"
+                  fill="none" stroke="#1A1A1A" stroke-width="2.5" stroke-dasharray="2 6" opacity="0.35"/>
+
+            <!-- Roads (decorative) -->
+            <g stroke="#3B82C4" stroke-width="1" opacity="0.45" fill="none">
+              <path d="M 80 200 Q 200 240 320 270 T 510 350"/>
+              <path d="M 180 60 Q 220 200 260 320 T 360 460"/>
+            </g>
+
+            <!-- Department label -->
+            <text x="500" y="120" font-family="Oswald,sans-serif" font-weight="700" font-size="36" fill="#1A1A1A" opacity="0.12" text-anchor="end">77</text>
+            <text x="500" y="155" font-family="ui-monospace,monospace" font-size="11" fill="#1A1A1A" opacity="0.4" text-anchor="end">SEINE-ET-MARNE</text>
+
+            <!-- Cities (positions approximative — ordering & layout for legibility) -->
+            <!-- Pin component -->
+            <g id="cities">
+              <!-- Melun (HQ - big yellow pin) -->
+              <g transform="translate(225,300)">
+                <circle r="22" fill="#FFC72C" opacity="0.25" class="pin-ring"/>
+                <circle r="10" fill="#FFC72C" stroke="#1A1A1A" stroke-width="2"/>
+                <circle r="3" fill="#1A1A1A"/>
+                <text y="-18" font-family="Oswald,sans-serif" font-weight="700" font-size="14" fill="#1A1A1A" text-anchor="middle">MELUN</text>
+                <text y="26" font-family="ui-monospace,monospace" font-size="9" fill="#1A1A1A" opacity="0.7" text-anchor="middle">SIÈGE · 77000</text>
+              </g>
+
+              <!-- Other cities — small pins -->
+              <g font-family="Inter,sans-serif" font-size="11" fill="#1A1A1A">
+                <g transform="translate(150,200)"><circle r="5" fill="#1A1A1A"/><text x="9" y="3">Brie-Comte-Robert</text></g>
+                <g transform="translate(290,235)"><circle r="5" fill="#1A1A1A"/><text x="9" y="3">Chaumes-en-Brie</text></g>
+                <g transform="translate(260,335)"><circle r="5" fill="#1A1A1A"/><text x="9" y="3">Châtelet-en-Brie</text></g>
+                <g transform="translate(195,355)"><circle r="5" fill="#1A1A1A"/><text x="-9" y="3" text-anchor="end">Saint-Ouen-en-Brie</text></g>
+                <g transform="translate(370,310)"><circle r="5" fill="#1A1A1A"/><text x="9" y="3">Nangis</text></g>
+                <g transform="translate(335,275)"><circle r="5" fill="#1A1A1A"/><text x="9" y="3">Mormant</text></g>
+                <g transform="translate(170,420)"><circle r="5" fill="#1A1A1A"/><text x="9" y="3">Fontainebleau</text></g>
+                <g transform="translate(465,310)"><circle r="5" fill="#1A1A1A"/><text x="9" y="3">Provins</text></g>
+                <g transform="translate(420,165)"><circle r="5" fill="#1A1A1A"/><text x="9" y="3">Coulommiers</text></g>
+                <g transform="translate(247,288)"><circle r="4" fill="#3B82C4"/></g>
+                <g transform="translate(252,340)"><circle r="4" fill="#3B82C4"/></g>
+                <g transform="translate(195,310)"><circle r="4" fill="#3B82C4"/></g>
+                <g transform="translate(170,290)"><circle r="4" fill="#3B82C4"/></g>
+                <g transform="translate(185,340)"><circle r="4" fill="#3B82C4"/></g>
+              </g>
+
+              <!-- Legend -->
+              <g transform="translate(80,460)" font-family="ui-monospace,monospace" font-size="10" fill="#1A1A1A">
+                <circle r="6" fill="#FFC72C" stroke="#1A1A1A" stroke-width="1.5"/>
+                <text x="12" y="3">Siège ABTP</text>
+                <g transform="translate(110,0)">
+                  <circle r="4" fill="#1A1A1A"/>
+                  <text x="9" y="3">Communes desservies</text>
+                </g>
+                <g transform="translate(280,0)">
+                  <circle r="3" fill="#3B82C4"/>
+                  <text x="8" y="3">Périphérie Melun</text>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Cities list -->
+      <div class="lg:col-span-5">
+        <p class="text-abtp-steel mb-4">Cliquez votre commune pour ouvrir directement la ligne :</p>
+        <ul class="flex flex-wrap gap-2 mb-6">
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Melun</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Brie-Comte-Robert</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Chaumes-en-Brie</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Le Châtelet-en-Brie</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Saint-Ouen-en-Brie</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Nangis</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Mormant</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Fontainebleau</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Provins</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Coulommiers</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Maincy</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Sivry-Courtry</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Vaux-le-Pénil</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Dammarie-lès-Lys</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Le Mée-sur-Seine</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Tournan-en-Brie</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Combs-la-Ville</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Lieusaint</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Savigny-le-Temple</a></li>
+          <li><a class="tag hover:bg-abtp-yellow hover:border-abtp-yellow transition" href="tel:0782408809">Vert-Saint-Denis</a></li>
+        </ul>
+
+        <div class="rounded-lg bg-white border-l-4 border-abtp-yellow p-5 shadow-sm">
+          <p class="text-abtp-charcoal font-semibold mb-1">Votre commune n'apparaît pas ?</p>
+          <p class="text-abtp-steel">Appelez-nous : si c'est dans le 77, on vient.</p>
+          <a href="tel:0782408809" class="mt-3 inline-flex items-center gap-2 text-abtp-charcoal font-display tracking-wider hover:text-abtp-yellow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            07 82 40 88 09
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 8. PROCESSUS                                                  -->
+<!-- ============================================================= -->
+<section id="processus" class="py-16 md:py-24 bg-abtp-charcoal text-white relative overflow-hidden">
+  <div class="absolute top-0 left-0 right-0 h-1.5 stripes opacity-70"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+    <div class="max-w-3xl mb-12">
+      <p class="font-display tracking-widest text-abtp-yellow text-sm mb-3">— Processus</p>
+      <h2 class="font-display text-4xl md:text-5xl mb-4">De l'appel au chantier livré.</h2>
+      <p class="text-white/70 text-lg">Quatre étapes, pas une de plus. Vous savez toujours où vous en êtes.</p>
+    </div>
+
+    <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+      <li class="rounded-lg bg-white/5 border border-white/10 p-6 relative">
+        <span class="absolute -top-4 left-6 bg-abtp-yellow text-abtp-charcoal font-display text-sm tracking-widest px-2.5 py-1 rounded-md">ÉTAPE 01</span>
+        <h3 class="font-display text-2xl mt-3 mb-2">Appel ou message</h3>
+        <p class="text-white/70">Rappel sous 1h ouvré.</p>
+      </li>
+      <li class="rounded-lg bg-white/5 border border-white/10 p-6 relative">
+        <span class="absolute -top-4 left-6 bg-abtp-yellow text-abtp-charcoal font-display text-sm tracking-widest px-2.5 py-1 rounded-md">ÉTAPE 02</span>
+        <h3 class="font-display text-2xl mt-3 mb-2">Visite du chantier</h3>
+        <p class="text-white/70">Gratuite, sans engagement.</p>
+      </li>
+      <li class="rounded-lg bg-white/5 border border-white/10 p-6 relative">
+        <span class="absolute -top-4 left-6 bg-abtp-yellow text-abtp-charcoal font-display text-sm tracking-widest px-2.5 py-1 rounded-md">ÉTAPE 03</span>
+        <h3 class="font-display text-2xl mt-3 mb-2">Devis détaillé sous 48h</h3>
+        <p class="text-white/70">Clair, par poste, sans surprise.</p>
+      </li>
+      <li class="rounded-lg bg-abtp-yellow text-abtp-charcoal p-6 relative">
+        <span class="absolute -top-4 left-6 bg-abtp-charcoal text-abtp-yellow font-display text-sm tracking-widest px-2.5 py-1 rounded-md">ÉTAPE 04</span>
+        <h3 class="font-display text-2xl mt-3 mb-2">Chantier réalisé</h3>
+        <p class="opacity-80">Calendrier respecté, terrain propre à la livraison.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 9. CONTACT                                                    -->
+<!-- ============================================================= -->
+<section id="contact" class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14">
+
+      <!-- Left column: huge phone, email, mini-map -->
+      <div class="lg:col-span-5">
+        <p class="font-display tracking-widest text-abtp-blue text-sm mb-3">— Contact</p>
+        <h2 class="font-display text-4xl md:text-5xl text-abtp-charcoal mb-4">Parlons de votre chantier.</h2>
+        <p class="text-abtp-steel text-lg mb-8">Un coup de fil suffit pour démarrer. Devis gratuit, visite sans engagement, rappel sous 1h ouvré.</p>
+
+        <a href="tel:0782408809" class="block group">
+          <span class="block font-display tracking-widest text-xs text-abtp-steel mb-1">TÉLÉPHONE</span>
+          <span class="block font-display text-4xl sm:text-5xl md:text-6xl text-abtp-charcoal group-hover:text-abtp-yellow transition leading-tight">
+            07 82 40 88 09
+          </span>
+        </a>
+
+        <a href="https://wa.me/33782408809" class="mt-4 inline-flex items-center gap-2 bg-[#25D366] text-white font-semibold px-5 py-3 rounded-md hover:bg-[#1FB855]" aria-label="Écrire à ABTP sur WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01A7.94 7.94 0 0 0 17.6 6.32zM12.05 18.5h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.65.67-2.43-.16-.25a6.6 6.6 0 1 1 12.24-3.49 6.6 6.6 0 0 1-6.64 6.58zm3.62-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.62.77-.12.13-.23.15-.42.05-.2-.1-.83-.31-1.59-.98-.59-.52-.98-1.17-1.1-1.37-.11-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34l-.39-.01a.74.74 0 0 0-.54.25c-.18.2-.7.69-.7 1.67 0 .98.72 1.94.82 2.07.1.13 1.42 2.17 3.44 3.04.48.21.86.33 1.15.43.48.15.92.13 1.26.08.39-.06 1.17-.48 1.34-.94.16-.46.16-.86.12-.94-.05-.08-.18-.13-.38-.23z"/></svg>
+          Écrire sur WhatsApp
+        </a>
+
+        <a href="mailto:alexandre.bossee.abtp@gmail.com" class="block group mt-6">
+          <span class="block font-display tracking-widest text-xs text-abtp-steel mb-1">EMAIL</span>
+          <span class="block text-abtp-charcoal text-lg break-all group-hover:text-abtp-yellow transition font-semibold">
+            alexandre.bossee.abtp@gmail.com
+          </span>
+        </a>
+
+        <div class="mt-8 rounded-lg overflow-hidden border border-neutral-200 bg-abtp-light">
+          <!-- Mini map -->
+          <div class="relative aspect-[5/3]">
+            <svg viewBox="0 0 500 300" class="absolute inset-0 w-full h-full" aria-label="Carte miniature : siège ABTP, 8 Square de Beauregard, 77000 Melun">
+              <rect width="500" height="300" fill="#EFEFEF"/>
+              <!-- Streets grid -->
+              <g stroke="#D5D5D5" stroke-width="1.5" fill="none">
+                <path d="M 0 80 Q 250 60 500 100"/>
+                <path d="M 0 200 L 500 180"/>
+                <path d="M 120 0 L 140 300"/>
+                <path d="M 320 0 Q 310 150 340 300"/>
+                <path d="M 60 0 L 80 300" stroke="#C0C0C0" stroke-width="2.5"/>
+                <path d="M 0 140 L 500 140" stroke="#C0C0C0" stroke-width="2.5"/>
+              </g>
+              <!-- Seine river hint -->
+              <path d="M 0 240 Q 100 230 200 245 T 400 235 T 500 250" stroke="#3B82C4" stroke-width="6" fill="none" opacity="0.35"/>
+              <text x="430" y="270" font-family="Oswald, sans-serif" font-size="11" fill="#3B82C4" opacity="0.6">SEINE</text>
+
+              <!-- Park area -->
+              <rect x="220" y="100" width="100" height="60" rx="6" fill="#D8E8C8"/>
+
+              <!-- Pin -->
+              <g transform="translate(255,145)">
+                <circle r="26" fill="#FFC72C" opacity="0.25" class="pin-ring"/>
+                <path d="M0 -20 C 8 -20 14 -14 14 -6 C 14 4 0 20 0 20 C 0 20 -14 4 -14 -6 C -14 -14 -8 -20 0 -20 Z" fill="#FFC72C" stroke="#1A1A1A" stroke-width="2"/>
+                <circle cy="-6" r="4" fill="#1A1A1A"/>
+              </g>
+              <text x="255" y="195" font-family="Oswald,sans-serif" font-weight="700" font-size="13" text-anchor="middle" fill="#1A1A1A">ABTP · MELUN</text>
+            </svg>
+          </div>
+          <div class="p-4 flex items-start justify-between gap-4">
+            <div>
+              <p class="font-semibold text-abtp-charcoal">Siège social</p>
+              <p class="text-sm text-abtp-steel">8 Square de Beauregard<br/>77000 Melun</p>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=8+Square+de+Beauregard+77000+Melun" target="_blank" rel="noopener" class="text-abtp-blue underline decoration-2 underline-offset-2 text-sm font-semibold hover:text-abtp-charcoal">
+              Itinéraire ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: form -->
+      <div class="lg:col-span-7">
+        <form id="contact-form" class="rounded-lg bg-abtp-charcoal text-white p-6 md:p-8 shadow-xl">
+          <p class="font-display tracking-widest text-abtp-yellow text-sm mb-3">— Demande de devis</p>
+          <h3 class="font-display text-2xl md:text-3xl mb-1">Décrivez votre projet.</h3>
+          <p class="text-white/60 text-sm mb-6">Alexandre vous rappelle sous 1h ouvré.</p>
+
+          <!-- Hidden : estimation summary slot -->
+          <div id="estimation-summary" class="hidden mb-6 rounded-md border border-abtp-yellow/40 bg-abtp-yellow/5 p-4">
+            <div class="flex items-center justify-between mb-2">
+              <p class="font-display text-sm tracking-widest text-abtp-yellow">— Pré-rempli depuis le calculateur</p>
+              <button type="button" id="clear-summary" class="text-xs text-white/60 underline">effacer</button>
+            </div>
+            <p id="estimation-summary-text" class="text-sm text-white/90 leading-relaxed"></p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="block text-sm text-white/70 mb-1">Prénom <span class="text-abtp-yellow">*</span></span>
+              <input required type="text" name="prenom" autocomplete="given-name" class="w-full bg-black/40 border border-white/15 rounded-md px-3 py-2.5 focus:border-abtp-yellow"/>
+            </label>
+            <label class="block">
+              <span class="block text-sm text-white/70 mb-1">Téléphone <span class="text-abtp-yellow">*</span></span>
+              <input required type="tel" name="telephone" autocomplete="tel" inputmode="tel" placeholder="06 12 34 56 78" class="w-full bg-black/40 border border-white/15 rounded-md px-3 py-2.5 focus:border-abtp-yellow"/>
+            </label>
+            <label class="block">
+              <span class="block text-sm text-white/70 mb-1">Commune <span class="text-abtp-yellow">*</span></span>
+              <input required type="text" name="commune" placeholder="Melun, Brie-Comte-Robert…" class="w-full bg-black/40 border border-white/15 rounded-md px-3 py-2.5 focus:border-abtp-yellow"/>
+            </label>
+            <label class="block">
+              <span class="block text-sm text-white/70 mb-1">Type de chantier <span class="text-abtp-yellow">*</span></span>
+              <select required name="type" class="w-full bg-black/40 border border-white/15 rounded-md px-3 py-2.5 focus:border-abtp-yellow appearance-none">
+                <option value="">— Choisir —</option>
+                <option>Terrassement</option>
+                <option>Assainissement</option>
+                <option>Création d'allée</option>
+                <option>Aménagement extérieur</option>
+                <option>Maçonnerie</option>
+                <option>Évacuation gravats</option>
+                <option>Autre / je ne sais pas</option>
+              </select>
+            </label>
+            <label class="block sm:col-span-2">
+              <span class="block text-sm text-white/70 mb-1">Surface approximative (m²)</span>
+              <input type="number" name="surface" min="0" inputmode="numeric" class="w-full bg-black/40 border border-white/15 rounded-md px-3 py-2.5 focus:border-abtp-yellow"/>
+            </label>
+            <label class="block sm:col-span-2">
+              <span class="block text-sm text-white/70 mb-1">Message (optionnel)</span>
+              <textarea name="message" rows="4" class="w-full bg-black/40 border border-white/15 rounded-md px-3 py-2.5 focus:border-abtp-yellow" placeholder="Décrivez votre projet, l'accès chantier, les délais…"></textarea>
+            </label>
+          </div>
+
+          <button type="submit" class="mt-6 cta-yellow w-full rounded-md font-display tracking-wider text-lg py-4 inline-flex items-center justify-center gap-2 shadow-lg">
+            Envoyer ma demande
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+
+          <p id="form-status" class="mt-4 text-sm text-abtp-yellow hidden"></p>
+
+          <p class="mt-6 text-xs text-white/55 leading-relaxed">
+            Les informations transmises via ce formulaire sont utilisées uniquement pour vous recontacter au sujet de votre projet. Elles ne sont ni revendues, ni partagées. Vous pouvez demander leur suppression à tout moment en écrivant à <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a> (RGPD, art. 17).
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================= -->
+<!-- 10. FOOTER                                                    -->
+<!-- ============================================================= -->
+<footer class="bg-abtp-charcoal text-white pt-16 pb-28 md:pb-12 border-t-4 border-abtp-yellow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid md:grid-cols-12 gap-8">
+      <div class="md:col-span-5">
+        <div class="flex items-center gap-2.5 mb-4">
+          <svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
+            <rect x="2" y="2" width="60" height="60" rx="10" fill="#FFC72C"/>
+            <rect x="2" y="2" width="60" height="60" rx="10" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+            <text x="32" y="44" font-family="Oswald, sans-serif" font-weight="700" font-size="30" text-anchor="middle" fill="#1A1A1A">A</text>
+          </svg>
+          <span class="font-display text-2xl tracking-wider">ABTP</span>
+        </div>
+        <p class="text-white/70 text-sm leading-relaxed mb-5">
+          Terrassement, assainissement, pavage et aménagement extérieur. Melun et sud Seine-et-Marne.<br/>Le patron sur le chantier.
+        </p>
+        <a href="tel:0782408809" class="cta-yellow rounded-md inline-flex items-center gap-2 px-4 py-2.5 font-semibold">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+          07 82 40 88 09
+        </a>
+      </div>
+
+      <div class="md:col-span-3">
+        <p class="font-display tracking-widest text-abtp-yellow text-sm mb-3">— Services</p>
+        <ul class="space-y-1.5 text-white/70 text-sm">
+          <li><a class="hover:text-white" href="#services">Terrassement</a></li>
+          <li><a class="hover:text-white" href="#services">Assainissement</a></li>
+          <li><a class="hover:text-white" href="#services">Création d'allée</a></li>
+          <li><a class="hover:text-white" href="#services">Aménagement</a></li>
+          <li><a class="hover:text-white" href="#services">Maçonnerie</a></li>
+          <li><a class="hover:text-white" href="#services">Évacuation gravats</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-4">
+        <p class="font-display tracking-widest text-abtp-yellow text-sm mb-3">— Coordonnées</p>
+        <address class="not-italic text-white/70 text-sm leading-relaxed">
+          ABTP · SARL<br/>
+          8 Square de Beauregard<br/>
+          77000 Melun<br/>
+          <a class="underline decoration-abtp-yellow underline-offset-2 hover:text-white" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a><br/>
+          <a class="underline decoration-abtp-yellow underline-offset-2 hover:text-white" href="tel:0782408809">07 82 40 88 09</a><br/>
+          <a class="inline-flex items-center gap-1.5 mt-2 text-[#25D366] hover:text-white font-semibold" href="https://wa.me/33782408809" aria-label="Écrire à ABTP sur WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01A7.94 7.94 0 0 0 17.6 6.32zM12.05 18.5h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.65.67-2.43-.16-.25a6.6 6.6 0 1 1 12.24-3.49 6.6 6.6 0 0 1-6.64 6.58zm3.62-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.62.77-.12.13-.23.15-.42.05-.2-.1-.83-.31-1.59-.98-.59-.52-.98-1.17-1.1-1.37-.11-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34l-.39-.01a.74.74 0 0 0-.54.25c-.18.2-.7.69-.7 1.67 0 .98.72 1.94.82 2.07.1.13 1.42 2.17 3.44 3.04.48.21.86.33 1.15.43.48.15.92.13 1.26.08.39-.06 1.17-.48 1.34-.94.16-.46.16-.86.12-.94-.05-.08-.18-.13-.38-.23z"/></svg>
+            WhatsApp
+          </a>
+        </address>
+      </div>
+    </div>
+
+    <hr class="border-white/10 my-10"/>
+
+    <!-- Mentions légales -->
+    <details id="mentions" class="legal text-sm">
+      <summary class="flex items-center justify-between gap-3 cursor-pointer py-2">
+        <span class="font-display tracking-widest text-abtp-yellow">— Mentions légales</span>
+        <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="mt-4 grid md:grid-cols-2 gap-6 text-white/70 leading-relaxed">
+        <div>
+          <p class="text-white font-semibold mb-2">Éditeur du site</p>
+          <!-- TODO: remplacer {{CAPITAL}} après confirmation Alexandre -->
+          <p>ABTP — SARL au capital de {{CAPITAL}} €<br/>
+            8 Square de Beauregard, 77000 Melun<br/>
+            SIREN 940 605 652 · NAF 4312A<br/>
+            Directeur de la publication : Alexandre Bossée
+          </p>
+          <p class="mt-4">
+            <!-- TODO: Hébergeur à compléter lors du déploiement -->
+            Hébergement : {{HEBERGEUR}}
+          </p>
+          <p class="mt-4">
+            <!-- TODO: Garantie décennale à compléter -->
+            Assurance décennale : {{COMPAGNIE_DECENNALE}} — Police n° {{N_POLICE}}
+          </p>
+        </div>
+        <div>
+          <p class="text-white font-semibold mb-2">Données personnelles</p>
+          <p>
+            Les informations transmises via le formulaire de contact sont utilisées uniquement pour vous recontacter au sujet de votre projet. Elles ne sont ni revendues, ni partagées. Vous pouvez demander leur suppression à tout moment en écrivant à <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a> (RGPD, art. 17).
+          </p>
+          <p class="mt-4 text-white font-semibold mb-2">Propriété intellectuelle</p>
+          <p>
+            L'ensemble des contenus (textes, illustrations, code) est la propriété d'ABTP. Toute reproduction sans autorisation est interdite.
+          </p>
+        </div>
+      </div>
+    </details>
+
+    <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-white/50">
+      <p>
+        <a href="#mentions" class="hover:text-white">Mentions légales</a> ·
+        <a href="#mentions" class="hover:text-white">Politique de confidentialité</a> ·
+        <span>CGV à venir</span>
+      </p>
+      <p>© 2026 ABTP — Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile sticky CTA bar (deux moitiés) -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 flex shadow-2xl">
+  <a href="tel:0782408809" class="flex-1 bg-abtp-yellow text-abtp-charcoal font-display tracking-wider py-4 flex items-center justify-center gap-2" aria-label="Appeler ABTP">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+    Appeler
+  </a>
+  <a href="https://wa.me/33782408809" class="flex-1 bg-[#25D366] text-white font-display tracking-wider py-4 flex items-center justify-center gap-2" aria-label="Écrire à ABTP sur WhatsApp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01A7.94 7.94 0 0 0 17.6 6.32zM12.05 18.5h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.65.67-2.43-.16-.25a6.6 6.6 0 1 1 12.24-3.49 6.6 6.6 0 0 1-6.64 6.58zm3.62-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.62.77-.12.13-.23.15-.42.05-.2-.1-.83-.31-1.59-.98-.59-.52-.98-1.17-1.1-1.37-.11-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34l-.39-.01a.74.74 0 0 0-.54.25c-.18.2-.7.69-.7 1.67 0 .98.72 1.94.82 2.07.1.13 1.42 2.17 3.44 3.04.48.21.86.33 1.15.43.48.15.92.13 1.26.08.39-.06 1.17-.48 1.34-.94.16-.46.16-.86.12-.94-.05-.08-.18-.13-.38-.23z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<!-- ============================================================= -->
+<!-- JS — Calculateur                                              -->
+<!-- ============================================================= -->
+<script>
+(() => {
+  const TYPES = [
+    { id:'allee',    label:"Allée / cour pavée",   depth:30,  coef:1.0, icon:'allee'   },
+    { id:'terrasse', label:"Terrasse",             depth:25,  coef:1.0, icon:'terrasse'},
+    { id:'fosse',    label:"Fosse / fondation",    depth:100, coef:1.3, icon:'fosse'   },
+    { id:'piscine',  label:"Piscine",              depth:180, coef:1.5, icon:'piscine' },
+    { id:'viab',     label:"Viabilisation / tranchée", depth:80, coef:1.2, icon:'tranchee' },
+    { id:'nivel',    label:"Nivellement terrain",  depth:15,  coef:0.7, icon:'nivel'   },
+  ];
+
+  const SOILS = [
+    { id:'terre',  label:"Terre / sablonneux",    coefVol:1.20, coefTime:1.0, icon:'terre' },
+    { id:'mixte',  label:"Terre + cailloux",      coefVol:1.30, coefTime:1.2, icon:'mixte' },
+    { id:'argile', label:"Argileux / rocheux",    coefVol:1.40, coefTime:1.5, icon:'argile'},
+  ];
+
+  // ---- State ----
+  const state = {
+    typeId:  'allee',
+    soilId:  'terre',
+    surface: 50,
+    depth:   30,
+  };
+  let prev = { vol: 0, low: 0, high: 0 };
+
+  const $ = sel => document.querySelector(sel);
+  const bennesWrap = (() => document.getElementById('bennes-svg-wrap'))();
+
+  // ---- Render option cards ----
+  const typeGrid = $('#type-grid');
+  TYPES.forEach(t => {
+    const el = document.createElement('button');
+    el.type = 'button';
+    el.className = 'opt rounded-lg p-3 text-left text-white flex items-start gap-3';
+    el.setAttribute('role','radio');
+    el.setAttribute('aria-checked','false');
+    el.dataset.id = t.id;
+    el.innerHTML = `
+      <span class="opt-dot mt-0.5 shrink-0"></span>
+      <span class="flex-1 min-w-0">
+        <span class="block font-display text-sm leading-tight">${t.label}</span>
+        <span class="block text-[11px] text-white/50 font-mono mt-0.5">${t.depth} cm</span>
+      </span>
+    `;
+    el.addEventListener('click', () => selectType(t.id));
+    typeGrid.appendChild(el);
+  });
+
+  const soilGrid = $('#soil-grid');
+  SOILS.forEach(s => {
+    const el = document.createElement('button');
+    el.type = 'button';
+    el.className = 'opt rounded-lg p-3 text-left text-white flex items-start gap-3';
+    el.setAttribute('role','radio');
+    el.setAttribute('aria-checked','false');
+    el.dataset.id = s.id;
+    el.innerHTML = `
+      <span class="opt-dot mt-0.5 shrink-0"></span>
+      <span class="flex-1 min-w-0">
+        <span class="block font-display text-sm leading-tight">${s.label}</span>
+      </span>
+    `;
+    el.addEventListener('click', () => selectSoil(s.id));
+    soilGrid.appendChild(el);
+  });
+
+  function selectType(id){
+    state.typeId = id;
+    const t = TYPES.find(x => x.id === id);
+    // Update depth default
+    state.depth = t.depth;
+    $('#depth').value = t.depth;
+    $('#depth-num').value = t.depth;
+    paintTypes();
+    refresh();
+  }
+  function selectSoil(id){
+    state.soilId = id;
+    paintSoils();
+    refresh();
+  }
+  function paintTypes(){
+    typeGrid.querySelectorAll('.opt').forEach(b => {
+      const active = b.dataset.id === state.typeId;
+      b.classList.toggle('is-active', active);
+      b.setAttribute('aria-checked', active ? 'true':'false');
+    });
+  }
+  function paintSoils(){
+    soilGrid.querySelectorAll('.opt').forEach(b => {
+      const active = b.dataset.id === state.soilId;
+      b.classList.toggle('is-active', active);
+      b.setAttribute('aria-checked', active ? 'true':'false');
+    });
+  }
+
+  // Sliders <-> number inputs
+  const surface = $('#surface'), surfaceNum = $('#surface-num');
+  const depth   = $('#depth'),   depthNum   = $('#depth-num');
+
+  function syncRange(rangeEl, numEl, key){
+    const update = (v) => {
+      const min = +rangeEl.min, max = +rangeEl.max;
+      v = Math.max(min, Math.min(max, v));
+      rangeEl.value = v; numEl.value = v;
+      state[key] = v;
+      const pct = ((v - min) / (max - min)) * 100;
+      rangeEl.style.setProperty('--pct', pct + '%');
+      refresh();
+    };
+    rangeEl.addEventListener('input', () => update(+rangeEl.value));
+    numEl.addEventListener('input', () => {
+      const v = +numEl.value;
+      if (Number.isFinite(v)) update(v);
+    });
+    update(+rangeEl.value);
+  }
+  syncRange(surface, surfaceNum, 'surface');
+  syncRange(depth,   depthNum,   'depth');
+
+  // ---- Math ----
+  function repartirBennes(volume){
+    let restant = Math.ceil(volume);
+    const r = { b30:0, b15:0, b8:0 };
+    while (restant > 0){
+      if (restant >= 23)      { r.b30++; restant -= 30; }
+      else if (restant >= 11) { r.b15++; restant -= 15; }
+      else                    { r.b8++;  restant -= 8;  }
+    }
+    return r;
+  }
+  function formatBennes(r){
+    const parts = [];
+    if (r.b30) parts.push(`${r.b30}× benne 30 m³`);
+    if (r.b15) parts.push(`${r.b15}× benne 15 m³`);
+    if (r.b8)  parts.push(`${r.b8}× benne 8 m³`);
+    return parts.join(' + ');
+  }
+  function rotationsCount(r){ return r.b30 + r.b15 + r.b8; }
+  function fmtEur(n){ return new Intl.NumberFormat('fr-FR').format(Math.round(n)); }
+
+  // ---- Counter animation ----
+  function animateNumber(el, from, to, format = (v)=>Math.round(v)){
+    const dur = 480; const t0 = performance.now();
+    const tile = el.closest('.num-tile'); if (tile) tile.classList.add('bump');
+    function step(now){
+      const t = Math.min(1, (now - t0) / dur);
+      const ease = 1 - Math.pow(1 - t, 3);
+      const cur = from + (to - from) * ease;
+      el.textContent = format(cur);
+      if (t < 1) requestAnimationFrame(step);
+      else { el.textContent = format(to); setTimeout(()=> tile && tile.classList.remove('bump'), 120); }
+    }
+    requestAnimationFrame(step);
+  }
+
+  // ---- Bennes SVG visualisation ----
+  function bennesSVG(items){
+    // items = array of {size:30|15|8, fillRatio:0..1}
+    if (!items.length){
+      return `<p class="text-white/40 text-sm font-mono py-6 text-center">Sélectionnez un volume pour visualiser les bennes</p>`;
+    }
+    const widths = { 30: 180, 15: 130, 8: 90 };
+    const heights= { 30: 100, 15: 80,  8: 60 };
+    const gap = 14;
+    const baseY = 130;
+    const totalW = items.reduce((s,it) => s + widths[it.size] + gap, 0) + 20;
+    let x = 14;
+    const skips = items.map((it, i) => {
+      const w = widths[it.size], h = heights[it.size];
+      const y = baseY - h;
+      const innerW = w - 18;
+      const innerH = h - 14;
+      const innerX = x + 9;
+      const innerY = y + 6;
+      const fillH = Math.max(0, innerH * it.fillRatio);
+      const fillY = innerY + (innerH - fillH);
+      const sx = x; // shortcut
+      const out = `
+        <g transform="translate(0,0)">
+          <!-- Truck arm hint -->
+          <line x1="${sx + w + 4}" y1="${baseY - h*0.6}" x2="${sx + w + 4}" y2="${baseY}" stroke="#3B82C4" stroke-width="1.2" opacity="0.5" stroke-dasharray="2 3"/>
+          <!-- skip silhouette (trapezoid) -->
+          <path d="M ${sx + 4} ${baseY} L ${sx} ${y + 6} L ${sx + 4} ${y} L ${sx + w - 4} ${y} L ${sx + w} ${y + 6} L ${sx + w - 4} ${baseY} Z"
+                fill="#1A1A1A" stroke="#FFC72C" stroke-width="2"/>
+          <!-- inner cavity -->
+          <rect x="${innerX}" y="${innerY}" width="${innerW}" height="${innerH}" fill="#0e0e0e" stroke="#3B3B3B" stroke-width="1"/>
+          <!-- fill -->
+          <rect class="benne-fill" x="${innerX}" y="${fillY}" width="${innerW}" height="${fillH}" fill="#FFC72C"/>
+          <!-- ribs -->
+          <line x1="${sx + w*0.33}" y1="${y + 2}" x2="${sx + w*0.33}" y2="${baseY - 2}" stroke="#FFC72C" stroke-width="0.8" opacity="0.35"/>
+          <line x1="${sx + w*0.66}" y1="${y + 2}" x2="${sx + w*0.66}" y2="${baseY - 2}" stroke="#FFC72C" stroke-width="0.8" opacity="0.35"/>
+          <!-- size badge -->
+          <rect x="${sx + w/2 - 22}" y="${baseY + 8}" width="44" height="20" rx="3" fill="#FFC72C"/>
+          <text x="${sx + w/2}" y="${baseY + 22}" font-family="Oswald, sans-serif" font-weight="700" font-size="12" text-anchor="middle" fill="#1A1A1A">${it.size} m³</text>
+          <!-- wheels -->
+          <circle cx="${sx + 14}" cy="${baseY + 2}" r="6" fill="#1A1A1A" stroke="#FFC72C" stroke-width="1.5"/>
+          <circle cx="${sx + w - 14}" cy="${baseY + 2}" r="6" fill="#1A1A1A" stroke="#FFC72C" stroke-width="1.5"/>
+        </g>
+      `;
+      x += w + gap;
+      return out;
+    }).join('');
+
+    return `
+      <svg viewBox="0 0 ${Math.max(totalW, 300)} 170" class="w-full h-auto" preserveAspectRatio="xMidYMid meet" style="min-width:${Math.max(totalW, 300)}px">
+        <!-- ground -->
+        <line x1="0" y1="${baseY + 2}" x2="${Math.max(totalW, 300)}" y2="${baseY + 2}" stroke="#FFC72C" stroke-width="1.5" stroke-dasharray="3 5" opacity="0.6"/>
+        ${skips}
+      </svg>
+    `;
+  }
+
+  // ---- Refresh ----
+  function refresh(){
+    const t = TYPES.find(x => x.id === state.typeId);
+    const s = SOILS.find(x => x.id === state.soilId);
+
+    const volumeNet = (state.surface * state.depth) / 100; // m³ in place
+    const volumeFoisonne = volumeNet * s.coefVol;
+    const dureeJours = Math.max(1, Math.round((volumeNet / 25) * s.coefTime * t.coef));
+
+    const prixBas  = volumeNet * 35 * s.coefVol * t.coef;
+    const prixHaut = volumeNet * 90 * s.coefVol * t.coef;
+
+    const tooSmall = volumeNet < 1;
+
+    const warn = $('#r-warn');
+    const results = $('#results');
+    if (tooSmall){
+      warn.classList.remove('hidden');
+      results.classList.add('opacity-60');
+      bennesWrap.innerHTML = bennesSVG([]);
+      $('#bennes-readout').textContent = '—';
+      $('#r-bennes').textContent = '—';
+      $('#r-rotations').textContent = '— rotations';
+      $('#r-volume').textContent = '0';
+      $('#r-price-low').textContent = '0';
+      $('#r-price-high').textContent = '0';
+      $('#r-duree').textContent = '0';
+      return;
+    } else {
+      warn.classList.add('hidden');
+      results.classList.remove('opacity-60');
+    }
+
+    // Animate volume number
+    animateNumber($('#r-volume'), prev.vol, Math.round(volumeFoisonne));
+    animateNumber($('#r-price-low'), prev.low, prixBas, v => fmtEur(v));
+    animateNumber($('#r-price-high'), prev.high, prixHaut, v => fmtEur(v));
+    prev = { vol: Math.round(volumeFoisonne), low: prixBas, high: prixHaut };
+
+    // Bennes
+    const r = repartirBennes(volumeFoisonne);
+    const rot = rotationsCount(r);
+    $('#r-bennes').textContent = formatBennes(r) || '—';
+    $('#r-rotations').textContent = `= ${rot} rotation${rot>1?'s':''} 114`;
+
+    $('#r-duree').textContent = dureeJours;
+
+    // Build SVG list — fills correspond to a *visual* sense of fill
+    const capacities = { 30:30, 15:15, 8:8 };
+    const items = [];
+    let remaining = volumeFoisonne;
+    [['b30',30], ['b15',15], ['b8',8]].forEach(([k, size]) => {
+      const count = r[k];
+      for (let i=0;i<count;i++){
+        const cap = capacities[size];
+        const used = Math.min(cap, Math.max(0, remaining));
+        items.push({ size, fillRatio: used / cap });
+        remaining -= cap;
+      }
+    });
+    const totalCap = items.reduce((s,i)=> s + capacities[i.size], 0);
+    const fillPct = totalCap ? Math.min(100, Math.round((volumeFoisonne / totalCap) * 100)) : 0;
+    $('#bennes-readout').textContent = `remplissage : ${fillPct} %  ·  capacité ${totalCap} m³`;
+    bennesWrap.innerHTML = bennesSVG(items);
+  }
+
+  // Initial paint
+  paintTypes();
+  paintSoils();
+  refresh();
+
+  // ---- Final CTA pre-fills form & scrolls ----
+  $('#open-form').addEventListener('click', () => {
+    const t = TYPES.find(x => x.id === state.typeId);
+    const s = SOILS.find(x => x.id === state.soilId);
+    const volumeNet = (state.surface * state.depth)/100;
+    const volumeFoisonne = volumeNet * s.coefVol;
+    const r = repartirBennes(volumeFoisonne);
+    const summary = `Chantier ${t.label.toLowerCase()} · ${state.surface} m² × ${state.depth} cm · sol ${s.label.toLowerCase()}. Volume foisonné ≈ ${Math.round(volumeFoisonne)} m³ · ${formatBennes(r) || 'aucune benne'} · ${rotationsCount(r)} rotation(s) du 114.`;
+    const sumEl = $('#estimation-summary');
+    $('#estimation-summary-text').textContent = summary;
+    sumEl.classList.remove('hidden');
+
+    // Pre-fill type select & surface
+    const form = $('#contact-form');
+    const sel = form.querySelector('select[name="type"]');
+    const typeMap = { allee:"Création d'allée", terrasse:"Aménagement extérieur", fosse:"Terrassement", piscine:"Terrassement", viab:"Terrassement", nivel:"Aménagement extérieur" };
+    const wanted = typeMap[state.typeId];
+    if (wanted){
+      for (const opt of sel.options){ if (opt.value === wanted || opt.textContent === wanted){ sel.value = opt.value || opt.textContent; break; } }
+    }
+    form.querySelector('input[name="surface"]').value = state.surface;
+    form.querySelector('textarea[name="message"]').value = `Bonjour Alexandre,\n\n${summary}\n\nMerci.`;
+
+    // Scroll & focus
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => form.querySelector('input[name="prenom"]').focus(), 600);
+  });
+
+  $('#clear-summary').addEventListener('click', () => {
+    $('#estimation-summary').classList.add('hidden');
+    $('#estimation-summary-text').textContent = '';
+  });
+
+  // ---- Form submit (demo : compose mailto) ----
+  $('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const obj = Object.fromEntries(fd.entries());
+    const body = [
+      `Prénom : ${obj.prenom}`,
+      `Téléphone : ${obj.telephone}`,
+      `Commune : ${obj.commune}`,
+      `Type de chantier : ${obj.type}`,
+      obj.surface ? `Surface : ${obj.surface} m²` : null,
+      '',
+      'Message :',
+      obj.message || '(aucun)',
+    ].filter(Boolean).join('\n');
+    const mailto = `mailto:alexandre.bossee.abtp@gmail.com?subject=${encodeURIComponent('Demande de devis ABTP — ' + (obj.prenom || ''))}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+    const status = $('#form-status');
+    status.textContent = 'Votre client mail s\'ouvre pour finaliser l\'envoi. Sinon, appelez le 07 82 40 88 09.';
+    status.classList.remove('hidden');
+  });
+
+  // ---- Scrollspy ----
+  const sections = ['services','calculateur','avant-apres','pourquoi','zone','processus','contact'].map(id => document.getElementById(id));
+  const links = document.querySelectorAll('.nav-link');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting){
+        links.forEach(l => l.setAttribute('aria-current', l.getAttribute('href') === '#' + e.target.id ? 'true' : 'false'));
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => s && io.observe(s));
+})();
+</script>
+
+<!-- ============================================================= -->
+<!-- JS — Slider Avant / Après                                     -->
+<!-- ============================================================= -->
+<script>
+(() => {
+  document.querySelectorAll('.before-after').forEach(card => {
+    const range  = card.querySelector('.ba-range');
+    const after  = card.querySelector('.ba-after');
+    const handle = card.querySelector('.ba-handle');
+    if (!range || !after || !handle) return;
+    const update = () => {
+      const v = range.value; // 0 to 100
+      after.style.clipPath = `inset(0 0 0 ${v}%)`;
+      handle.style.left = `${v}%`;
+    };
+    range.addEventListener('input', update);
+    update();
+  });
+})();
+</script>
+
+<!-- ============================================================= -->
+<!-- JS — Effets de mouvement au scroll (alternance gauche/droite)  -->
+<!-- ============================================================= -->
+<script>
+(() => {
+  // Les cartes des grilles marquées .reveal-group entrent en alternance :
+  // gauche, droite, gauche... avec un léger décalage en cascade.
+  document.querySelectorAll('.reveal-group').forEach(group => {
+    Array.from(group.children).forEach((child, i) => {
+      child.classList.add('reveal', i % 2 === 0 ? 'reveal-left' : 'reveal-right');
+      child.style.transitionDelay = (i % 3) * 90 + 'ms';
+    });
+  });
+
+  const items = document.querySelectorAll('.reveal');
+  if (!items.length) return;
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+
+  items.forEach(el => io.observe(el));
+})();
+</script>
+
+</body>
+</html>
