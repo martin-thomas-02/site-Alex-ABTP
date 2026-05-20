@@ -21,36 +21,44 @@
 <!-- Favicon (logo ABTP simplifié, jaune) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231A1A1A'/%3E%3Ctext x='32' y='42' font-family='Arial Black,sans-serif' font-size='26' font-weight='900' text-anchor='middle' fill='%23FFC72C'%3EA%3C/text%3E%3C/svg%3E" />
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<!-- Canonical + meta SEO -->
+<link rel="canonical" href="https://abtp77.fr/" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content="Alexandre Bossée — ABTP SARL" />
+<meta name="geo.region" content="FR-77" />
+<meta name="geo.placename" content="Melun" />
+<meta name="geo.position" content="48.5409;2.6601" />
+<meta name="ICBM" content="48.5409, 2.6601" />
 
-<!-- Tailwind CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          abtp: {
-            yellow:     '#FFC72C',
-            yellowSoft: '#FFE066',
-            blue:       '#3B82C4',
-            charcoal:   '#1A1A1A',
-            steel:      '#4A4A4A',
-            light:      '#F5F5F5',
-            whatsapp:   '#25D366',
-          },
-        },
-        fontFamily: {
-          display: ['Oswald', 'Arial Narrow', 'sans-serif'],
-          sans:    ['Inter', 'system-ui', 'sans-serif'],
-        },
-      },
-    },
-  };
-</script>
+<!-- Tailwind compilé localement -->
+<link rel="stylesheet" href="dist/tailwind.css" />
+
+<!-- Polices auto-hébergées (RGPD safe — variable fonts) -->
+<style>
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url('assets/fonts/oswald-v57-latin.woff2') format('woff2');
+  }
+</style>
+
+<!-- Preload hero pour LCP -->
+<link rel="preload" as="image"
+      href="assets/photos/hero-chantier-1024.webp"
+      imagesrcset="assets/photos/hero-chantier-640.webp 640w,
+                   assets/photos/hero-chantier-1024.webp 1024w,
+                   assets/photos/hero-chantier-1600.webp 1600w"
+      imagesizes="(max-width: 1024px) 100vw, 42vw"
+      type="image/webp" fetchpriority="high" />
 
 <style>
   :root{
