@@ -1382,31 +1382,133 @@
         <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
       </summary>
       <div class="mt-4 grid md:grid-cols-2 gap-6 text-white/70 leading-relaxed">
+
         <div>
           <p class="text-white font-semibold mb-2">Éditeur du site</p>
-          <!-- TODO: remplacer {{CAPITAL}} après confirmation Alexandre -->
-          <p>ABTP — SARL au capital de {{CAPITAL}} €<br/>
-            8 Square de Beauregard, 77000 Melun<br/>
-            SIREN 940 605 652 · NAF 4312A<br/>
-            Directeur de la publication : Alexandre Bossée
+          <p>
+            ABTP — Société à responsabilité limitée (SARL)<br/>
+            <!-- TODO_CLIENT: CAPITAL -->Capital social : {{CAPITAL}} €<br/>
+            Siège social : 8 Square de Beauregard, 77000 Melun<br/>
+            SIREN : 940 605 652 — RCS Melun<br/>
+            Code APE/NAF : 4312A (Travaux de terrassement courants)<br/>
+            <!-- TODO_CLIENT: TVA -->N° TVA intracommunautaire : {{TVA_INTRACOM_OU_FRANCHISE}}<br/>
+            Téléphone : 07 82 40 88 09<br/>
+            Email : <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a><br/>
+            Directeur de la publication : Alexandre Bossée, gérant
           </p>
-          <p class="mt-4">
-            <!-- TODO: Hébergeur à compléter lors du déploiement -->
-            Hébergement : {{HEBERGEUR}}
+
+          <p class="text-white font-semibold mt-5 mb-2">Hébergeur</p>
+          <p>
+            <!-- TODO_CLIENT: HEBERGEUR -->{{HEBERGEUR_RAISON_SOCIALE}}<br/>
+            <!-- TODO_CLIENT: HEBERGEUR -->{{HEBERGEUR_ADRESSE}}<br/>
+            <!-- TODO_CLIENT: HEBERGEUR -->Téléphone : {{HEBERGEUR_TEL}}<br/>
+            <!-- TODO_CLIENT: HEBERGEUR -->Site : {{HEBERGEUR_URL}}
           </p>
-          <p class="mt-4">
-            <!-- TODO: Garantie décennale à compléter -->
-            Assurance décennale : {{COMPAGNIE_DECENNALE}} — Police n° {{N_POLICE}}
+
+          <p class="text-white font-semibold mt-5 mb-2">Assurances professionnelles</p>
+          <p>
+            <strong>Assurance responsabilité civile professionnelle et décennale</strong> (art. 1792 du Code civil, loi Spinetta du 4 janvier 1978) :<br/>
+            <!-- TODO_CLIENT: DECENNALE -->Compagnie : {{COMPAGNIE_DECENNALE}}<br/>
+            <!-- TODO_CLIENT: DECENNALE -->N° de police : {{N_POLICE}}<br/>
+            Couverture géographique : France métropolitaine<br/>
+            Activités garanties : terrassement, assainissement non collectif, voirie et réseaux divers, maçonnerie courante, aménagements extérieurs.
+          </p>
+          <p class="mt-2 text-xs text-white/60">
+            Les ouvrages réalisés bénéficient en outre de la garantie de parfait achèvement (1 an, art. 1792-6 du Code civil) et de la garantie biennale de bon fonctionnement sur les éléments d'équipement dissociables (2 ans, art. 1792-3).
           </p>
         </div>
+
         <div>
-          <p class="text-white font-semibold mb-2">Données personnelles</p>
+          <p class="text-white font-semibold mb-2">Médiation de la consommation</p>
           <p>
-            Les informations transmises via le formulaire de contact sont utilisées uniquement pour vous recontacter au sujet de votre projet. Elles ne sont ni revendues, ni partagées. Vous pouvez demander leur suppression à tout moment en écrivant à <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a> (RGPD, art. 17).
+            Conformément aux articles L. 612-1 et suivants du Code de la consommation, ABTP propose à ses clients consommateurs un dispositif de médiation de la consommation. Le médiateur compétent est :<br/>
+            <!-- TODO_CLIENT: MEDIATEUR --><strong>{{MEDIATEUR_NOM}}</strong><br/>
+            <!-- TODO_CLIENT: MEDIATEUR -->{{MEDIATEUR_ADRESSE}}<br/>
+            <!-- TODO_CLIENT: MEDIATEUR -->Site : <a class="underline decoration-abtp-yellow underline-offset-2" href="{{MEDIATEUR_URL}}" target="_blank" rel="noopener">{{MEDIATEUR_URL}}</a>
           </p>
-          <p class="mt-4 text-white font-semibold mb-2">Propriété intellectuelle</p>
+          <p class="mt-2 text-xs text-white/60">
+            Le consommateur peut saisir gratuitement le médiateur après avoir tenté de résoudre le litige directement avec ABTP par réclamation écrite. La plateforme européenne de règlement en ligne des litiges est également disponible : <a class="underline decoration-abtp-yellow underline-offset-2" href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.
+          </p>
+
+          <p class="text-white font-semibold mt-5 mb-2">Droit de rétractation</p>
           <p>
-            L'ensemble des contenus (textes, illustrations, code) est la propriété d'ABTP. Toute reproduction sans autorisation est interdite.
+            Pour tout devis signé hors de l'établissement d'ABTP (notamment à votre domicile), vous bénéficiez d'un droit de rétractation de <strong>14 jours calendaires</strong> à compter de la signature, conformément aux articles L. 221-18 et suivants du Code de la consommation. Un formulaire de rétractation type vous est remis avec chaque devis. Si vous souhaitez que les travaux démarrent avant la fin de ce délai, une demande expresse et écrite vous sera demandée ; vous perdez alors le droit de vous rétracter une fois la prestation pleinement exécutée.
+          </p>
+
+          <p class="text-white font-semibold mt-5 mb-2">Propriété intellectuelle</p>
+          <p>
+            L'ensemble des contenus du site (textes, photographies, illustrations, logo, code source) est la propriété exclusive d'ABTP, sauf mentions contraires. Toute reproduction, représentation, modification, publication, adaptation totale ou partielle est interdite sans autorisation écrite préalable, sous peine de constituer une contrefaçon au sens des articles L. 335-2 et suivants du Code de la propriété intellectuelle.
+          </p>
+        </div>
+      </div>
+    </details>
+
+    <!-- Politique de confidentialité (RGPD) -->
+    <details id="confidentialite" class="legal text-sm mt-4">
+      <summary class="flex items-center justify-between gap-3 cursor-pointer py-2">
+        <span class="font-display tracking-widest text-abtp-yellow">— Politique de confidentialité (RGPD)</span>
+        <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="mt-4 grid md:grid-cols-2 gap-6 text-white/70 leading-relaxed">
+
+        <div>
+          <p class="text-white font-semibold mb-2">Responsable de traitement</p>
+          <p>
+            ABTP — SARL, représentée par son gérant Alexandre Bossée<br/>
+            8 Square de Beauregard, 77000 Melun<br/>
+            <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a>
+          </p>
+          <p class="mt-2 text-xs text-white/60">
+            Compte tenu de l'effectif et de la nature des traitements (pas de traitement à grande échelle, pas de données sensibles), ABTP n'est pas tenue de désigner un délégué à la protection des données (DPO) au sens de l'article 37 du RGPD. Toute question relative à vos données peut être adressée directement au responsable de traitement à l'adresse ci-dessus.
+          </p>
+
+          <p class="text-white font-semibold mt-5 mb-2">Données collectées et finalités</p>
+          <p>
+            Via le formulaire de demande de devis, ABTP collecte : prénom, numéro de téléphone, commune, type de chantier, surface approximative, message libre. Les champs marqués d'un astérisque sont obligatoires ; les autres sont facultatifs.
+          </p>
+          <p class="mt-2">
+            <strong>Finalités</strong> : prise de contact, qualification du besoin, élaboration et envoi d'un devis, suivi commercial du projet. Aucune utilisation à des fins de prospection commerciale automatisée, aucune cession à des tiers.
+          </p>
+          <p class="mt-2">
+            <strong>Base légale</strong> : exécution de mesures précontractuelles prises à votre demande (article 6.1.b du RGPD).
+          </p>
+        </div>
+
+        <div>
+          <p class="text-white font-semibold mb-2">Destinataires</p>
+          <p>
+            Les données sont accessibles exclusivement par Alexandre Bossée, gérant d'ABTP. Aucun sous-traitant n'a accès aux données du formulaire ; aucun transfert hors de l'Union européenne n'est effectué.
+          </p>
+
+          <p class="text-white font-semibold mt-5 mb-2">Durée de conservation</p>
+          <p>
+            — Demandes sans suite : 3 ans à compter du dernier contact (recommandation CNIL prospection BtoC).<br/>
+            — Devis signés et chantiers réalisés : 10 ans à compter de la réception des travaux (durée de la garantie décennale, art. 1792 Code civil).<br/>
+            — Données comptables associées : 10 ans (art. L. 123-22 Code de commerce).
+          </p>
+
+          <p class="text-white font-semibold mt-5 mb-2">Vos droits</p>
+          <p>
+            Conformément au RGPD (articles 15 à 22) et à la loi Informatique et Libertés modifiée, vous disposez à tout moment des droits suivants sur vos données personnelles :
+          </p>
+          <ul class="list-disc list-inside mt-2 space-y-0.5">
+            <li>droit d'<strong>accès</strong> et droit d'obtenir une copie</li>
+            <li>droit de <strong>rectification</strong> si les données sont inexactes</li>
+            <li>droit à l'<strong>effacement</strong> (« droit à l'oubli »)</li>
+            <li>droit à la <strong>limitation</strong> du traitement</li>
+            <li>droit d'<strong>opposition</strong> au traitement</li>
+            <li>droit à la <strong>portabilité</strong> de vos données</li>
+          </ul>
+          <p class="mt-2">
+            Pour exercer ces droits, écrivez à <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a> en précisant l'objet de votre demande. Une réponse vous sera apportée dans un délai d'un mois.
+          </p>
+          <p class="mt-2">
+            Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la <strong>CNIL</strong> : 3 place de Fontenoy — TSA 80715 — 75334 Paris Cedex 07 — <a class="underline decoration-abtp-yellow underline-offset-2" href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">www.cnil.fr/fr/plaintes</a>.
+          </p>
+
+          <p class="text-white font-semibold mt-5 mb-2">Cookies et traceurs</p>
+          <p>
+            Le site ABTP n'utilise <strong>aucun cookie de mesure d'audience, aucun cookie publicitaire et aucun traceur tiers</strong>. Seuls les cookies strictement nécessaires au fonctionnement du site peuvent être déposés (aucun à ce jour). Les polices d'écriture et frameworks CSS utilisés sont hébergés sur le même domaine que le site ; aucun appel à un service tiers (Google Fonts, CDN, analytics) n'est effectué sans votre consentement explicite.
           </p>
         </div>
       </div>
@@ -1415,7 +1517,7 @@
     <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-white/50">
       <p>
         <a href="#mentions" class="hover:text-white">Mentions légales</a> ·
-        <a href="#mentions" class="hover:text-white">Politique de confidentialité</a> ·
+        <a href="#confidentialite" class="hover:text-white">Politique de confidentialité</a> ·
         <span>CGV à venir</span>
       </p>
       <p>© 2026 ABTP — Tous droits réservés.</p>
