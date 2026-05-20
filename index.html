@@ -211,49 +211,217 @@
   }
 </style>
 
-<!-- Schema.org LocalBusiness -->
+<!-- Schema.org : GeneralContractor + 6 Services + WebSite + WebPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://abtp77.fr/#business",
-  "name": "ABTP",
-  "image": "https://abtp77.fr/og.jpg",
-  "telephone": "+33782408809",
-  "email": "alexandre.bossee.abtp@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "8 Square de Beauregard",
-    "postalCode": "77000",
-    "addressLocality": "Melun",
-    "addressCountry": "FR"
-  },
-  "geo": { "@type": "GeoCoordinates", "latitude": 48.5409, "longitude": 2.6601 },
-  "areaServed": [
-    {"@type": "City", "name": "Melun"},
-    {"@type": "City", "name": "Brie-Comte-Robert"},
-    {"@type": "City", "name": "Chaumes-en-Brie"},
-    {"@type": "City", "name": "Le Châtelet-en-Brie"},
-    {"@type": "City", "name": "Saint-Ouen-en-Brie"},
-    {"@type": "City", "name": "Nangis"},
-    {"@type": "City", "name": "Mormant"},
-    {"@type": "City", "name": "Fontainebleau"},
-    {"@type": "City", "name": "Provins"},
-    {"@type": "City", "name": "Coulommiers"},
-    {"@type": "City", "name": "Maincy"},
-    {"@type": "City", "name": "Sivry-Courtry"},
-    {"@type": "City", "name": "Vaux-le-Pénil"},
-    {"@type": "City", "name": "Dammarie-lès-Lys"},
-    {"@type": "City", "name": "Le Mée-sur-Seine"},
-    {"@type": "City", "name": "Tournan-en-Brie"},
-    {"@type": "City", "name": "Combs-la-Ville"},
-    {"@type": "City", "name": "Lieusaint"},
-    {"@type": "City", "name": "Savigny-le-Temple"},
-    {"@type": "City", "name": "Vert-Saint-Denis"}
-  ],
-  "priceRange": "€€",
-  "openingHours": "Mo-Sa 07:00-19:00",
-  "founder": {"@type": "Person", "name": "Alexandre Bossée"}
+  "@graph": [
+    {
+      "@type": ["GeneralContractor", "LocalBusiness"],
+      "@id": "https://abtp77.fr/#business",
+      "name": "ABTP",
+      "alternateName": "ABTP Terrassement",
+      "legalName": "ABTP SARL",
+      "description": "Entreprise de terrassement, assainissement et aménagement extérieur basée à Melun (77). Intervention dans toute la Seine-et-Marne. Devis sous 48 h, zéro sous-traitance, évacuation des gravats incluse.",
+      "slogan": "Le patron sur le chantier.",
+      "url": "https://abtp77.fr/",
+      "image": [
+        "https://abtp77.fr/og.jpg",
+        "https://abtp77.fr/assets/photos/hero-chantier-1600.webp"
+      ],
+      "telephone": "+33782408809",
+      "email": "alexandre.bossee.abtp@gmail.com",
+      "priceRange": "€€ — Devis gratuit sous 48 h",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Espèces, Chèque, Virement bancaire",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8 Square de Beauregard",
+        "postalCode": "77000",
+        "addressLocality": "Melun",
+        "addressRegion": "Île-de-France",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.5409,
+        "longitude": 2.6601
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=8+Square+de+Beauregard+77000+Melun",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "07:00",
+          "closes": "19:00"
+        }
+      ],
+      "areaServed": [
+        {"@type":"City","name":"Melun","containedInPlace":{"@type":"AdministrativeArea","name":"Seine-et-Marne"}},
+        {"@type":"City","name":"Brie-Comte-Robert"},
+        {"@type":"City","name":"Chaumes-en-Brie"},
+        {"@type":"City","name":"Le Châtelet-en-Brie"},
+        {"@type":"City","name":"Saint-Ouen-en-Brie"},
+        {"@type":"City","name":"Nangis"},
+        {"@type":"City","name":"Mormant"},
+        {"@type":"City","name":"Fontainebleau"},
+        {"@type":"City","name":"Provins"},
+        {"@type":"City","name":"Coulommiers"},
+        {"@type":"City","name":"Maincy"},
+        {"@type":"City","name":"Sivry-Courtry"},
+        {"@type":"City","name":"Vaux-le-Pénil"},
+        {"@type":"City","name":"Dammarie-lès-Lys"},
+        {"@type":"City","name":"Le Mée-sur-Seine"},
+        {"@type":"City","name":"Tournan-en-Brie"},
+        {"@type":"City","name":"Combs-la-Ville"},
+        {"@type":"City","name":"Lieusaint"},
+        {"@type":"City","name":"Savigny-le-Temple"},
+        {"@type":"City","name":"Vert-Saint-Denis"},
+        {
+          "@type":"AdministrativeArea",
+          "name":"Seine-et-Marne",
+          "identifier":"FR-77"
+        }
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.5409,
+          "longitude": 2.6601
+        },
+        "geoRadius": "35000"
+      },
+      "knowsAbout": [
+        "Terrassement",
+        "Assainissement individuel",
+        "Fosse toutes eaux",
+        "Création d'allée",
+        "Pavage",
+        "Aménagement extérieur",
+        "Maçonnerie",
+        "Nivellement de terrain",
+        "Évacuation de gravats",
+        "Viabilisation de terrain"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Prestations ABTP",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Terrassement",
+              "description": "Décaissement, nivellement, fouilles en rigole pour fondations, piscines, viabilisation.",
+              "serviceType": "Terrassement",
+              "areaServed": {"@type":"AdministrativeArea","name":"Seine-et-Marne"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Assainissement",
+              "description": "Raccordement tout-à-l'égout, fosses toutes eaux, drainage, eaux pluviales.",
+              "serviceType": "Assainissement",
+              "areaServed": {"@type":"AdministrativeArea","name":"Seine-et-Marne"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Création d'allée",
+              "description": "Allées en pavé, dalles, graviers stabilisés — du tracé à la finition.",
+              "serviceType": "Pavage",
+              "areaServed": {"@type":"AdministrativeArea","name":"Seine-et-Marne"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Aménagement extérieur",
+              "description": "Cours, terrasses, abords, mise en forme du terrain.",
+              "serviceType": "Aménagement extérieur",
+              "areaServed": {"@type":"AdministrativeArea","name":"Seine-et-Marne"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Maçonnerie",
+              "description": "Murets, dalles béton, soutènement, petits ouvrages d'abord.",
+              "serviceType": "Maçonnerie",
+              "areaServed": {"@type":"AdministrativeArea","name":"Seine-et-Marne"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Évacuation des gravats",
+              "description": "Bennes ampliroll en propre, évacuation directe vers la décharge agréée. Inclus dans le devis.",
+              "serviceType": "Évacuation de gravats",
+              "areaServed": {"@type":"AdministrativeArea","name":"Seine-et-Marne"}
+            }
+          }
+        ]
+      },
+      "founder": {
+        "@type": "Person",
+        "@id": "https://abtp77.fr/#alexandre-bossee",
+        "name": "Alexandre Bossée",
+        "jobTitle": "Gérant et chef de chantier",
+        "worksFor": {"@id": "https://abtp77.fr/#business"},
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "WIAME VRD",
+          "url": "https://www.wiamevrd.com/"
+        }
+      },
+      "foundingDate": "2025-02-06",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "SIREN",
+          "value": "940605652"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "NAF",
+          "value": "43.12A"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/p/ABTP-Terrassements/",
+        "https://fr.linkedin.com/in/alexandre-bossee-b598761b8",
+        "https://www.allovoisins.com/v/terrassement-assainissement/melun",
+        "https://annuaire-entreprises.data.gouv.fr/entreprise/abtp-940605652",
+        "https://g.page/abtp77"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://abtp77.fr/#website",
+      "url": "https://abtp77.fr/",
+      "name": "ABTP — Terrassement Melun (77)",
+      "publisher": {"@id": "https://abtp77.fr/#business"},
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://abtp77.fr/#webpage",
+      "url": "https://abtp77.fr/",
+      "name": "Terrassement Melun (77) — ABTP, le patron sur le chantier",
+      "isPartOf": {"@id": "https://abtp77.fr/#website"},
+      "about": {"@id": "https://abtp77.fr/#business"},
+      "inLanguage": "fr-FR",
+      "primaryImageOfPage": "https://abtp77.fr/og.jpg"
+    }
+  ]
 }
 </script>
 </head>
