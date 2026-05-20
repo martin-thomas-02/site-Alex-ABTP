@@ -1,0 +1,26 @@
+{
+  "name": "site-alex-abtp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/tailwind.css --minify",
+    "dev": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martin-thomas-02/site-Alex-ABTP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/martin-thomas-02/site-Alex-ABTP/issues"
+  },
+  "homepage": "https://github.com/martin-thomas-02/site-Alex-ABTP#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
