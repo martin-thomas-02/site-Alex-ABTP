@@ -541,13 +541,19 @@
       <!-- Right: hero visual (photo réelle) -->
       <div class="lg:col-span-5 reveal reveal-right">
         <figure class="relative aspect-[4/5] sm:aspect-[5/5] lg:aspect-[4/5] rounded-lg overflow-hidden border border-white/10 bg-abtp-charcoal shadow-2xl">
-          <img
-            src="photos/photo%20ent%C3%AAte.jpg"
-            alt="Chantier ABTP en cours — Melun, Seine-et-Marne"
-            class="absolute inset-0 w-full h-full object-cover"
-            loading="eager"
-            fetchpriority="high"
-          />
+          <picture>
+            <source type="image/avif" srcset="assets/photos/hero-chantier.avif" />
+            <source type="image/webp"
+                    srcset="assets/photos/hero-chantier-640.webp 640w,
+                            assets/photos/hero-chantier-1024.webp 1024w,
+                            assets/photos/hero-chantier-1600.webp 1600w"
+                    sizes="(max-width: 1024px) 100vw, 42vw" />
+            <img src="assets/photos/hero-chantier-1024.webp"
+                 alt="Chantier ABTP en cours — Melun, Seine-et-Marne"
+                 width="1024" height="768"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 loading="eager" fetchpriority="high" decoding="async" />
+          </picture>
           <!-- Léger voile pour lisibilité du tag -->
           <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
           <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2 text-[11px] font-mono text-white">
@@ -802,10 +808,32 @@
       <article class="before-after group rounded-lg border border-neutral-200 bg-white shadow-sm overflow-hidden">
         <div class="ba-wrap relative aspect-[4/3] bg-abtp-charcoal overflow-hidden">
           <div class="ba-before absolute inset-0">
-            <img src="photos/chemin%20avant.jpg" alt="Chemin d'accès avant intervention ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <picture>
+              <source type="image/avif" srcset="assets/photos/chemin-avant.avif" />
+              <source type="image/webp"
+                      srcset="assets/photos/chemin-avant-640.webp 640w,
+                              assets/photos/chemin-avant-1024.webp 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <img src="assets/photos/chemin-avant-1024.webp"
+                   alt="Chemin d'accès avant intervention ABTP"
+                   width="1024" height="1280"
+                   class="absolute inset-0 w-full h-full object-cover"
+                   loading="lazy" decoding="async" />
+            </picture>
           </div>
           <div class="ba-after absolute inset-0" style="clip-path: inset(0 0 0 50%);">
-            <img src="photos/chemin%20apr%C3%A8s.jpg" alt="Chemin d'accès après réalisation ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <picture>
+              <source type="image/avif" srcset="assets/photos/chemin-apres.avif" />
+              <source type="image/webp"
+                      srcset="assets/photos/chemin-apres-640.webp 640w,
+                              assets/photos/chemin-apres-1024.webp 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <img src="assets/photos/chemin-apres-1024.webp"
+                   alt="Chemin d'accès après réalisation ABTP"
+                   width="1024" height="1280"
+                   class="absolute inset-0 w-full h-full object-cover"
+                   loading="lazy" decoding="async" />
+            </picture>
           </div>
           <!-- Slider handle -->
           <div class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg pointer-events-none" style="left: 50%;">
@@ -829,10 +857,32 @@
       <article class="before-after group rounded-lg border border-neutral-200 bg-white shadow-sm overflow-hidden">
         <div class="ba-wrap relative aspect-[4/3] bg-abtp-charcoal overflow-hidden">
           <div class="ba-before absolute inset-0">
-            <img src="photos/devant%20maison%20avant.jpg" alt="Devant de maison avant intervention ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <picture>
+              <source type="image/avif" srcset="assets/photos/facade-avant.avif" />
+              <source type="image/webp"
+                      srcset="assets/photos/facade-avant-640.webp 640w,
+                              assets/photos/facade-avant-1024.webp 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <img src="assets/photos/facade-avant-1024.webp"
+                   alt="Devant de maison avant intervention ABTP"
+                   width="1024" height="772"
+                   class="absolute inset-0 w-full h-full object-cover"
+                   loading="lazy" decoding="async" />
+            </picture>
           </div>
           <div class="ba-after absolute inset-0" style="clip-path: inset(0 0 0 50%);">
-            <img src="photos/devant%20maison%20apr%C3%A8s.jpg" alt="Devant de maison après réalisation ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <picture>
+              <source type="image/avif" srcset="assets/photos/facade-apres.avif" />
+              <source type="image/webp"
+                      srcset="assets/photos/facade-apres-640.webp 640w,
+                              assets/photos/facade-apres-1024.webp 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <img src="assets/photos/facade-apres-1024.webp"
+                   alt="Devant de maison après réalisation ABTP"
+                   width="1024" height="768"
+                   class="absolute inset-0 w-full h-full object-cover"
+                   loading="lazy" decoding="async" />
+            </picture>
           </div>
           <div class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg pointer-events-none" style="left: 50%;">
             <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl">
@@ -853,10 +903,32 @@
       <article class="before-after group rounded-lg border border-neutral-200 bg-white shadow-sm overflow-hidden">
         <div class="ba-wrap relative aspect-[4/3] bg-abtp-charcoal overflow-hidden">
           <div class="ba-before absolute inset-0">
-            <img src="photos/terrasse%20avant.jpg" alt="Terrasse avant intervention ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <picture>
+              <source type="image/avif" srcset="assets/photos/terrasse-avant.avif" />
+              <source type="image/webp"
+                      srcset="assets/photos/terrasse-avant-640.webp 640w,
+                              assets/photos/terrasse-avant-1024.webp 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <img src="assets/photos/terrasse-avant-1024.webp"
+                   alt="Terrasse avant intervention ABTP"
+                   width="1024" height="1280"
+                   class="absolute inset-0 w-full h-full object-cover"
+                   loading="lazy" decoding="async" />
+            </picture>
           </div>
           <div class="ba-after absolute inset-0" style="clip-path: inset(0 0 0 50%);">
-            <img src="photos/terrasse%20apr%C3%A8s.jpg" alt="Terrasse après réalisation ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <picture>
+              <source type="image/avif" srcset="assets/photos/terrasse-apres.avif" />
+              <source type="image/webp"
+                      srcset="assets/photos/terrasse-apres-640.webp 640w,
+                              assets/photos/terrasse-apres-1024.webp 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <img src="assets/photos/terrasse-apres-1024.webp"
+                   alt="Terrasse après réalisation ABTP"
+                   width="1024" height="1280"
+                   class="absolute inset-0 w-full h-full object-cover"
+                   loading="lazy" decoding="async" />
+            </picture>
           </div>
           <div class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg pointer-events-none" style="left: 50%;">
             <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl">
