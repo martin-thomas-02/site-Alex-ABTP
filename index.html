@@ -1303,6 +1303,19 @@
             </label>
           </div>
 
+          <!-- Consentement RGPD -->
+          <label class="mt-6 flex items-start gap-3 text-sm text-white/75 leading-relaxed cursor-pointer">
+            <input required type="checkbox" name="consent_rgpd" class="mt-1 w-4 h-4 accent-abtp-yellow flex-shrink-0" />
+            <span>
+              J'accepte que mes informations soient utilisées par ABTP pour me recontacter au sujet de mon projet, conformément à la
+              <a href="#confidentialite" class="underline decoration-abtp-yellow underline-offset-2">politique de confidentialité</a>.
+              <span class="text-abtp-yellow">*</span>
+            </span>
+          </label>
+
+          <!-- Honeypot anti-spam (caché aux humains, rempli par les bots) -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+
           <button type="submit" class="mt-6 cta-yellow w-full rounded-md font-display tracking-wider text-lg py-4 inline-flex items-center justify-center gap-2 shadow-lg">
             Envoyer ma demande
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -1310,8 +1323,8 @@
 
           <p id="form-status" class="mt-4 text-sm text-abtp-yellow hidden"></p>
 
-          <p class="mt-6 text-xs text-white/55 leading-relaxed">
-            Les informations transmises via ce formulaire sont utilisées uniquement pour vous recontacter au sujet de votre projet. Elles ne sont ni revendues, ni partagées. Vous pouvez demander leur suppression à tout moment en écrivant à <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a> (RGPD, art. 17).
+          <p class="mt-6 text-xs text-white/60 leading-relaxed">
+            <strong>Données personnelles.</strong> Les informations recueillies sont traitées par ABTP (SARL, 8 Square de Beauregard 77000 Melun) aux seules fins de répondre à votre demande de devis. Base légale : exécution de mesures précontractuelles à votre demande (art. 6.1.b RGPD). Destinataire unique : Alexandre Bossée, gérant. Conservation : 3 ans après le dernier contact pour les demandes sans suite, 10 ans pour les chantiers réalisés. Vous disposez des droits d'accès, rectification, effacement, limitation, opposition et portabilité, exerçables à <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a>, ainsi que du droit d'introduire une réclamation auprès de la <a class="underline decoration-abtp-yellow underline-offset-2" href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">CNIL</a>. <a href="#confidentialite" class="underline decoration-abtp-yellow underline-offset-2">En savoir plus</a>.
           </p>
         </form>
       </div>
