@@ -836,14 +836,18 @@
                    loading="lazy" decoding="async" />
             </picture>
           </div>
-          <!-- Slider handle -->
-          <div class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg pointer-events-none" style="left: 50%;">
-            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
-            </div>
-          </div>
-          <!-- Input range invisible mais cliquable -->
-          <input type="range" min="0" max="100" value="50" class="ba-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize" aria-label="Glisser pour comparer avant et après" />
+          <!-- Slider handle draggable, focusable, clavier-friendly -->
+          <button type="button"
+                  class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg cursor-ew-resize touch-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-abtp-yellow/60"
+                  style="left: 50%; transform: translateX(-50%);"
+                  role="slider"
+                  aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                  aria-label="Glisser pour comparer avant et après"
+                  tabindex="0">
+            <span aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl pointer-events-none">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
+            </span>
+          </button>
           <!-- Badges -->
           <span class="absolute top-3 left-3 bg-abtp-charcoal/80 text-white text-[10px] font-mono px-2 py-1 rounded">AVANT</span>
           <span class="absolute top-3 right-3 bg-abtp-yellow text-abtp-charcoal text-[10px] font-mono px-2 py-1 rounded">APRÈS</span>
@@ -885,12 +889,18 @@
                    loading="lazy" decoding="async" />
             </picture>
           </div>
-          <div class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg pointer-events-none" style="left: 50%;">
-            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
-            </div>
-          </div>
-          <input type="range" min="0" max="100" value="50" class="ba-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize" aria-label="Glisser pour comparer avant et après" />
+          <!-- Slider handle draggable, focusable, clavier-friendly -->
+          <button type="button"
+                  class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg cursor-ew-resize touch-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-abtp-yellow/60"
+                  style="left: 50%; transform: translateX(-50%);"
+                  role="slider"
+                  aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                  aria-label="Glisser pour comparer avant et après"
+                  tabindex="0">
+            <span aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl pointer-events-none">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
+            </span>
+          </button>
           <span class="absolute top-3 left-3 bg-abtp-charcoal/80 text-white text-[10px] font-mono px-2 py-1 rounded">AVANT</span>
           <span class="absolute top-3 right-3 bg-abtp-yellow text-abtp-charcoal text-[10px] font-mono px-2 py-1 rounded">APRÈS</span>
         </div>
@@ -931,12 +941,18 @@
                    loading="lazy" decoding="async" />
             </picture>
           </div>
-          <div class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg pointer-events-none" style="left: 50%;">
-            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
-            </div>
-          </div>
-          <input type="range" min="0" max="100" value="50" class="ba-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize" aria-label="Glisser pour comparer avant et après" />
+          <!-- Slider handle draggable, focusable, clavier-friendly -->
+          <button type="button"
+                  class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg cursor-ew-resize touch-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-abtp-yellow/60"
+                  style="left: 50%; transform: translateX(-50%);"
+                  role="slider"
+                  aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                  aria-label="Glisser pour comparer avant et après"
+                  tabindex="0">
+            <span aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl pointer-events-none">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
+            </span>
+          </button>
           <span class="absolute top-3 left-3 bg-abtp-charcoal/80 text-white text-[10px] font-mono px-2 py-1 rounded">AVANT</span>
           <span class="absolute top-3 right-3 bg-abtp-yellow text-abtp-charcoal text-[10px] font-mono px-2 py-1 rounded">APRÈS</span>
         </div>
@@ -1782,17 +1798,59 @@
 <script>
 (() => {
   document.querySelectorAll('.before-after').forEach(card => {
-    const range  = card.querySelector('.ba-range');
+    const wrap   = card.querySelector('.ba-wrap');
     const after  = card.querySelector('.ba-after');
     const handle = card.querySelector('.ba-handle');
-    if (!range || !after || !handle) return;
-    const update = () => {
-      const v = range.value; // 0 to 100
-      after.style.clipPath = `inset(0 0 0 ${v}%)`;
-      handle.style.left = `${v}%`;
+    if (!wrap || !after || !handle) return;
+
+    let pct = 50;
+    const set = (v) => {
+      pct = Math.max(0, Math.min(100, v));
+      after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+      handle.style.left = `${pct}%`;
+      handle.setAttribute('aria-valuenow', Math.round(pct));
     };
-    range.addEventListener('input', update);
-    update();
+
+    const onMove = (clientX) => {
+      const rect = wrap.getBoundingClientRect();
+      const v = ((clientX - rect.left) / rect.width) * 100;
+      set(v);
+    };
+
+    // Pointer events (touch + souris + stylet)
+    let dragging = false;
+    handle.addEventListener('pointerdown', (e) => {
+      dragging = true;
+      handle.setPointerCapture?.(e.pointerId);
+      e.preventDefault();
+    });
+    handle.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      onMove(e.clientX);
+    });
+    const endDrag = (e) => {
+      dragging = false;
+      handle.releasePointerCapture?.(e.pointerId);
+    };
+    handle.addEventListener('pointerup', endDrag);
+    handle.addEventListener('pointercancel', endDrag);
+
+    // Clavier : flèches (2%), Shift+flèches (10%), Home / End
+    handle.addEventListener('keydown', (e) => {
+      const step = e.shiftKey ? 10 : 2;
+      if (e.key === 'ArrowLeft')  { set(pct - step); e.preventDefault(); }
+      if (e.key === 'ArrowRight') { set(pct + step); e.preventDefault(); }
+      if (e.key === 'Home')       { set(0);          e.preventDefault(); }
+      if (e.key === 'End')        { set(100);        e.preventDefault(); }
+    });
+
+    // Tap simple sur la zone : positionne le handle (sans entrer en drag)
+    wrap.addEventListener('click', (e) => {
+      if (e.target.closest('.ba-handle')) return; // evite double event
+      onMove(e.clientX);
+    });
+
+    set(50);
   });
 })();
 </script>
