@@ -19,38 +19,46 @@
 <meta name="twitter:description" content="Le patron sur le chantier. Devis sous 48h." />
 
 <!-- Favicon (logo ABTP simplifié, jaune) -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231A1A1A'/%3E%3Ctext x='32' y='42' font-family='Arial Black,sans-serif' font-size='26' font-weight='900' text-anchor='middle' fill='%23FFC72C'%3EA%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='10'%20fill='%231A1A1A'/%3E%3Ctext%20x='32'%20y='42'%20font-family='Arial%20Black,sans-serif'%20font-size='26'%20font-weight='900'%20text-anchor='middle'%20fill='%23FFC72C'%3EA%3C/text%3E%3C/svg%3E" />
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<!-- Canonical + meta SEO -->
+<link rel="canonical" href="https://abtp77.fr/" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content="Alexandre Bossée — ABTP SARL" />
+<meta name="geo.region" content="FR-77" />
+<meta name="geo.placename" content="Melun" />
+<meta name="geo.position" content="48.5409;2.6601" />
+<meta name="ICBM" content="48.5409, 2.6601" />
 
-<!-- Tailwind CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          abtp: {
-            yellow:     '#FFC72C',
-            yellowSoft: '#FFE066',
-            blue:       '#3B82C4',
-            charcoal:   '#1A1A1A',
-            steel:      '#4A4A4A',
-            light:      '#F5F5F5',
-            whatsapp:   '#25D366',
-          },
-        },
-        fontFamily: {
-          display: ['Oswald', 'Arial Narrow', 'sans-serif'],
-          sans:    ['Inter', 'system-ui', 'sans-serif'],
-        },
-      },
-    },
-  };
-</script>
+<!-- Tailwind compilé localement -->
+<link rel="stylesheet" href="dist/tailwind.css" />
+
+<!-- Polices auto-hébergées (RGPD safe — variable fonts) -->
+<style>
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url('assets/fonts/oswald-v57-latin.woff2') format('woff2');
+  }
+</style>
+
+<!-- Preload hero pour LCP -->
+<link rel="preload" as="image"
+      href="assets/photos/hero-chantier-1024.webp"
+      imagesrcset="assets/photos/hero-chantier-640.webp 640w,
+                   assets/photos/hero-chantier-1024.webp 1024w,
+                   assets/photos/hero-chantier-1600.webp 1600w"
+      imagesizes="(max-width: 1024px) 100vw, 42vw"
+      type="image/webp" fetchpriority="high" />
 
 <style>
   :root{
@@ -203,49 +211,217 @@
   }
 </style>
 
-<!-- Schema.org LocalBusiness -->
+<!-- Schema.org : GeneralContractor + 6 Services + WebSite + WebPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://abtp77.fr/#business",
-  "name": "ABTP",
-  "image": "https://abtp77.fr/og.jpg",
-  "telephone": "+33782408809",
-  "email": "alexandre.bossee.abtp@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "8 Square de Beauregard",
-    "postalCode": "77000",
-    "addressLocality": "Melun",
-    "addressCountry": "FR"
-  },
-  "geo": { "@type": "GeoCoordinates", "latitude": 48.5409, "longitude": 2.6601 },
-  "areaServed": [
-    {"@type": "City", "name": "Melun"},
-    {"@type": "City", "name": "Brie-Comte-Robert"},
-    {"@type": "City", "name": "Chaumes-en-Brie"},
-    {"@type": "City", "name": "Le Châtelet-en-Brie"},
-    {"@type": "City", "name": "Saint-Ouen-en-Brie"},
-    {"@type": "City", "name": "Nangis"},
-    {"@type": "City", "name": "Mormant"},
-    {"@type": "City", "name": "Fontainebleau"},
-    {"@type": "City", "name": "Provins"},
-    {"@type": "City", "name": "Coulommiers"},
-    {"@type": "City", "name": "Maincy"},
-    {"@type": "City", "name": "Sivry-Courtry"},
-    {"@type": "City", "name": "Vaux-le-Pénil"},
-    {"@type": "City", "name": "Dammarie-lès-Lys"},
-    {"@type": "City", "name": "Le Mée-sur-Seine"},
-    {"@type": "City", "name": "Tournan-en-Brie"},
-    {"@type": "City", "name": "Combs-la-Ville"},
-    {"@type": "City", "name": "Lieusaint"},
-    {"@type": "City", "name": "Savigny-le-Temple"},
-    {"@type": "City", "name": "Vert-Saint-Denis"}
-  ],
-  "priceRange": "€€",
-  "openingHours": "Mo-Sa 07:00-19:00",
-  "founder": {"@type": "Person", "name": "Alexandre Bossée"}
+  "@graph": [
+    {
+      "@type": ["GeneralContractor", "LocalBusiness"],
+      "@id": "https://abtp77.fr/#business",
+      "name": "ABTP",
+      "alternateName": "ABTP Terrassement",
+      "legalName": "ABTP SARL",
+      "description": "Entreprise de terrassement, assainissement et aménagement extérieur basée à Melun (77). Intervention dans toute la Seine-et-Marne. Devis sous 48 h, zéro sous-traitance, évacuation des gravats incluse.",
+      "slogan": "Le patron sur le chantier.",
+      "url": "https://abtp77.fr/",
+      "image": [
+        "https://abtp77.fr/og.jpg",
+        "https://abtp77.fr/assets/photos/hero-chantier-1600.webp"
+      ],
+      "telephone": "+33782408809",
+      "email": "alexandre.bossee.abtp@gmail.com",
+      "priceRange": "€€ — Devis gratuit sous 48 h",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Espèces, Chèque, Virement bancaire",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8 Square de Beauregard",
+        "postalCode": "77000",
+        "addressLocality": "Melun",
+        "addressRegion": "Île-de-France",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.5409,
+        "longitude": 2.6601
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=8+Square+de+Beauregard+77000+Melun",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "07:00",
+          "closes": "19:00"
+        }
+      ],
+      "areaServed": [
+        {"@type":"City","name":"Melun","containedInPlace":{"@type":"AdministrativeArea","name":"Seine-et-Marne"}},
+        {"@type":"City","name":"Brie-Comte-Robert"},
+        {"@type":"City","name":"Chaumes-en-Brie"},
+        {"@type":"City","name":"Le Châtelet-en-Brie"},
+        {"@type":"City","name":"Saint-Ouen-en-Brie"},
+        {"@type":"City","name":"Nangis"},
+        {"@type":"City","name":"Mormant"},
+        {"@type":"City","name":"Fontainebleau"},
+        {"@type":"City","name":"Provins"},
+        {"@type":"City","name":"Coulommiers"},
+        {"@type":"City","name":"Maincy"},
+        {"@type":"City","name":"Sivry-Courtry"},
+        {"@type":"City","name":"Vaux-le-Pénil"},
+        {"@type":"City","name":"Dammarie-lès-Lys"},
+        {"@type":"City","name":"Le Mée-sur-Seine"},
+        {"@type":"City","name":"Tournan-en-Brie"},
+        {"@type":"City","name":"Combs-la-Ville"},
+        {"@type":"City","name":"Lieusaint"},
+        {"@type":"City","name":"Savigny-le-Temple"},
+        {"@type":"City","name":"Vert-Saint-Denis"},
+        {
+          "@type":"AdministrativeArea",
+          "name":"Seine-et-Marne",
+          "identifier":"FR-77"
+        }
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.5409,
+          "longitude": 2.6601
+        },
+        "geoRadius": "35000"
+      },
+      "knowsAbout": [
+        "Terrassement",
+        "Assainissement individuel",
+        "Fosse toutes eaux",
+        "Création d'allée",
+        "Pavage",
+        "Aménagement extérieur",
+        "Maçonnerie",
+        "Nivellement de terrain",
+        "Évacuation de gravats",
+        "Viabilisation de terrain"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Prestations ABTP",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Terrassement",
+              "description": "Décaissement, nivellement, fouilles en rigole pour fondations, piscines, viabilisation.",
+              "serviceType": "Terrassement",
+              "areaServed": {"@type":"AdministrativeArea","name":"Seine-et-Marne"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Assainissement",
+              "description": "Raccordement tout-à-l'égout, fosses toutes eaux, drainage, eaux pluviales.",
+              "serviceType": "Assainissement",
+              "areaServed": {"@type":"AdministrativeArea","name":"Seine-et-Marne"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Création d'allée",
+              "description": "Allées en pavé, dalles, graviers stabilisés — du tracé à la finition.",
+              "serviceType": "Pavage",
+              "areaServed": {"@type":"AdministrativeArea","name":"Seine-et-Marne"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Aménagement extérieur",
+              "description": "Cours, terrasses, abords, mise en forme du terrain.",
+              "serviceType": "Aménagement extérieur",
+              "areaServed": {"@type":"AdministrativeArea","name":"Seine-et-Marne"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Maçonnerie",
+              "description": "Murets, dalles béton, soutènement, petits ouvrages d'abord.",
+              "serviceType": "Maçonnerie",
+              "areaServed": {"@type":"AdministrativeArea","name":"Seine-et-Marne"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Évacuation des gravats",
+              "description": "Bennes ampliroll en propre, évacuation directe vers la décharge agréée. Inclus dans le devis.",
+              "serviceType": "Évacuation de gravats",
+              "areaServed": {"@type":"AdministrativeArea","name":"Seine-et-Marne"}
+            }
+          }
+        ]
+      },
+      "founder": {
+        "@type": "Person",
+        "@id": "https://abtp77.fr/#alexandre-bossee",
+        "name": "Alexandre Bossée",
+        "jobTitle": "Gérant et chef de chantier",
+        "worksFor": {"@id": "https://abtp77.fr/#business"},
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "WIAME VRD",
+          "url": "https://www.wiamevrd.com/"
+        }
+      },
+      "foundingDate": "2025-02-06",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "SIREN",
+          "value": "940605652"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "NAF",
+          "value": "43.12A"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/p/ABTP-Terrassements/",
+        "https://fr.linkedin.com/in/alexandre-bossee-b598761b8",
+        "https://www.allovoisins.com/v/terrassement-assainissement/melun",
+        "https://annuaire-entreprises.data.gouv.fr/entreprise/abtp-940605652",
+        "https://g.page/abtp77"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://abtp77.fr/#website",
+      "url": "https://abtp77.fr/",
+      "name": "ABTP — Terrassement Melun (77)",
+      "publisher": {"@id": "https://abtp77.fr/#business"},
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://abtp77.fr/#webpage",
+      "url": "https://abtp77.fr/",
+      "name": "Terrassement Melun (77) — ABTP, le patron sur le chantier",
+      "isPartOf": {"@id": "https://abtp77.fr/#website"},
+      "about": {"@id": "https://abtp77.fr/#business"},
+      "inLanguage": "fr-FR",
+      "primaryImageOfPage": "https://abtp77.fr/og.jpg"
+    }
+  ]
 }
 </script>
 </head>
@@ -309,15 +485,10 @@
 
       <!-- Left: copy -->
       <div class="lg:col-span-7 text-white">
-        <div class="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-md bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/40">
-          <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
-          <span class="font-display text-xs tracking-widest">DISPONIBLE CETTE SEMAINE · RAPPEL SOUS 1H OUVRÉ</span>
-        </div>
-
-        <h1 class="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.02] mb-5">
-          Votre chantier,<br/>
-          du terrain brut<br/>
-          <span class="text-abtp-yellow">à la finition.</span>
+        <h1 class="font-display font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.04] mb-5">
+          Terrassement à Melun<br/>
+          et sud Seine-et-Marne :<br/>
+          <span class="text-abtp-yellow">le patron sur le chantier.</span>
         </h1>
 
         <p class="text-white/80 text-lg md:text-xl max-w-prose-tight mb-8">
@@ -339,6 +510,12 @@
             </svg>
             Écrire sur WhatsApp
           </a>
+        </div>
+
+        <!-- Bandeau honnête (vrai en permanence) sous CTA -->
+        <div class="inline-flex items-center gap-2 mb-8 px-3 py-1.5 rounded-md bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/40">
+          <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+          <span class="font-display text-[11px] tracking-widest">RAPPEL SOUS 1H OUVRÉ · DEVIS GRATUIT 48H</span>
         </div>
 
         <!-- Trust strip -->
@@ -365,13 +542,21 @@
       <!-- Right: hero visual (photo réelle) -->
       <div class="lg:col-span-5 reveal reveal-right">
         <figure class="relative aspect-[4/5] sm:aspect-[5/5] lg:aspect-[4/5] rounded-lg overflow-hidden border border-white/10 bg-abtp-charcoal shadow-2xl">
-          <img
-            src="photos/photo%20ent%C3%AAte.jpg"
-            alt="Chantier ABTP en cours — Melun, Seine-et-Marne"
-            class="absolute inset-0 w-full h-full object-cover"
-            loading="eager"
-            fetchpriority="high"
-          />
+          <picture>
+            <source type="image/avif"
+                    srcset="assets/photos/hero-chantier.avif 1024w"
+                    sizes="(max-width: 1024px) 100vw, 42vw" />
+            <source type="image/webp"
+                    srcset="assets/photos/hero-chantier-640.webp 640w,
+                            assets/photos/hero-chantier-1024.webp 1024w,
+                            assets/photos/hero-chantier-1600.webp 1600w"
+                    sizes="(max-width: 1024px) 100vw, 42vw" />
+            <img src="assets/photos/hero-chantier-1024.webp"
+                 alt="Chantier ABTP en cours — Melun, Seine-et-Marne"
+                 width="1024" height="768"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 loading="eager" fetchpriority="high" decoding="async" />
+          </picture>
           <!-- Léger voile pour lisibilité du tag -->
           <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
           <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2 text-[11px] font-mono text-white">
@@ -481,7 +666,7 @@
           <span class="w-2.5 h-2.5 rounded-full bg-abtp-yellow"></span>
           <span class="font-display tracking-widest text-sm text-white/80">CONSOLE CHANTIER · v1</span>
         </div>
-        <span class="hidden sm:inline-block text-[11px] font-mono text-white/40">ABTP-CALC.001</span>
+        <span class="hidden sm:inline-block text-[11px] font-mono text-white/55">ABTP-CALC.001</span>
       </div>
 
       <div class="p-5 md:p-8 grid lg:grid-cols-5 gap-6 lg:gap-8">
@@ -508,7 +693,7 @@
               </div>
             </div>
             <input id="surface" type="range" min="5" max="500" step="5" value="50" class="abtp-slider" aria-label="Surface en mètres carrés"/>
-            <div class="flex justify-between text-[11px] font-mono text-white/40 mt-1.5">
+            <div class="flex justify-between text-[11px] font-mono text-white/55 mt-1.5">
               <span>5 m²</span><span>500 m²</span>
             </div>
           </div>
@@ -524,7 +709,7 @@
               </div>
             </div>
             <input id="depth" type="range" min="10" max="300" step="5" value="30" class="abtp-slider" aria-label="Profondeur en centimètres"/>
-            <div class="flex justify-between text-[11px] font-mono text-white/40 mt-1.5">
+            <div class="flex justify-between text-[11px] font-mono text-white/55 mt-1.5">
               <span>10 cm</span><span>3,00 m</span>
             </div>
           </div>
@@ -549,19 +734,19 @@
               <div class="num-tile rounded-md bg-white/5 border border-white/10 p-4">
                 <p class="text-[11px] font-mono uppercase tracking-widest text-white/50">Volume à évacuer</p>
                 <p class="mt-1"><span id="r-volume" class="val font-display text-4xl text-white">0</span> <span class="text-abtp-yellow font-display text-2xl">m³</span></p>
-                <p class="text-[11px] text-white/40">terre foisonnée</p>
+                <p class="text-[11px] text-white/55">terre foisonnée</p>
               </div>
 
               <div class="num-tile rounded-md bg-white/5 border border-white/10 p-4">
                 <p class="text-[11px] font-mono uppercase tracking-widest text-white/50">Bennes</p>
                 <p id="r-bennes" class="val mt-1 font-display text-xl text-white leading-tight">—</p>
-                <p id="r-rotations" class="text-[11px] text-white/40">— rotations</p>
+                <p id="r-rotations" class="text-[11px] text-white/55">— rotations</p>
               </div>
 
               <div class="num-tile rounded-md bg-white/5 border border-white/10 p-4">
                 <p class="text-[11px] font-mono uppercase tracking-widest text-white/50">Fourchette devis</p>
-                <p class="mt-1"><span id="r-price-low" class="val font-display text-3xl text-white">0</span> <span class="text-white/40">—</span> <span id="r-price-high" class="val font-display text-3xl text-abtp-yellow">0</span> <span class="text-abtp-yellow font-display text-xl">€</span></p>
-                <p class="text-[11px] text-white/40">HT, hors fournitures</p>
+                <p class="mt-1"><span id="r-price-low" class="val font-display text-3xl text-white">0</span> <span class="text-white/55">—</span> <span id="r-price-high" class="val font-display text-3xl text-abtp-yellow">0</span> <span class="text-abtp-yellow font-display text-xl">€</span></p>
+                <p class="text-[11px] text-white/55">HT, hors fournitures</p>
               </div>
 
               <div class="rounded-md bg-white/5 border border-white/10 p-4">
@@ -574,7 +759,7 @@
               Augmentez la surface ou la profondeur pour obtenir une estimation.
             </p>
 
-            <p class="mt-4 text-[11px] text-white/45 leading-relaxed">
+            <p class="mt-4 text-[11px] text-white/60 leading-relaxed">
               Estimation indicative HT, hors évacuation en décharge classée et hors fournitures. Sans valeur contractuelle. Le devis d'Alexandre seul fait foi.
             </p>
           </div>
@@ -586,12 +771,12 @@
         <div class="rounded-lg bg-black/30 border border-white/10 p-5">
           <div class="flex items-baseline justify-between mb-4 gap-2 flex-wrap">
             <p class="font-display tracking-widest text-xs text-white/50">— Bennes nécessaires</p>
-            <p id="bennes-readout" class="font-mono text-xs text-abtp-yellow">remplissage : 0 %</p>
+            <p id="bennes-readout" class="font-mono text-xs text-abtp-yellow font-semibold">remplissage : 0 %</p>
           </div>
           <div id="bennes-svg-wrap" class="overflow-x-auto">
             <!-- bennes rendered by JS -->
           </div>
-          <p class="mt-3 text-[11px] text-white/40 font-mono">Format : Nx benne X m³ = Y rotations 114</p>
+          <p class="mt-3 text-[11px] text-white/55 font-mono">Format : Nx benne X m³ = Y rotations 114</p>
         </div>
       </div>
 
@@ -601,7 +786,7 @@
           Obtenir le vrai devis sous 48h
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </button>
-        <p class="mt-3 text-center text-[11px] text-white/45 leading-relaxed max-w-2xl mx-auto">
+        <p class="mt-3 text-center text-[11px] text-white/60 leading-relaxed max-w-2xl mx-auto">
           Estimation indicative pour information. Le devis officiel d'Alexandre prend en compte l'accès chantier, les évacuations imposées, les terrassements en finition manuelle, et reste seul contractuel.
         </p>
       </div>
@@ -626,19 +811,49 @@
       <article class="before-after group rounded-lg border border-neutral-200 bg-white shadow-sm overflow-hidden">
         <div class="ba-wrap relative aspect-[4/3] bg-abtp-charcoal overflow-hidden">
           <div class="ba-before absolute inset-0">
-            <img src="photos/chemin%20avant.jpg" alt="Chemin d'accès avant intervention ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <picture>
+              <source type="image/avif"
+                      srcset="assets/photos/chemin-avant.avif 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <source type="image/webp"
+                      srcset="assets/photos/chemin-avant-640.webp 640w,
+                              assets/photos/chemin-avant-1024.webp 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <img src="assets/photos/chemin-avant-1024.webp"
+                   alt="Chemin d'accès avant intervention ABTP"
+                   width="1024" height="1280"
+                   class="absolute inset-0 w-full h-full object-cover"
+                   loading="lazy" decoding="async" />
+            </picture>
           </div>
           <div class="ba-after absolute inset-0" style="clip-path: inset(0 0 0 50%);">
-            <img src="photos/chemin%20apr%C3%A8s.jpg" alt="Chemin d'accès après réalisation ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <picture>
+              <source type="image/avif"
+                      srcset="assets/photos/chemin-apres.avif 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <source type="image/webp"
+                      srcset="assets/photos/chemin-apres-640.webp 640w,
+                              assets/photos/chemin-apres-1024.webp 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <img src="assets/photos/chemin-apres-1024.webp"
+                   alt="Chemin d'accès après réalisation ABTP"
+                   width="1024" height="1280"
+                   class="absolute inset-0 w-full h-full object-cover"
+                   loading="lazy" decoding="async" />
+            </picture>
           </div>
-          <!-- Slider handle -->
-          <div class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg pointer-events-none" style="left: 50%;">
-            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
-            </div>
-          </div>
-          <!-- Input range invisible mais cliquable -->
-          <input type="range" min="0" max="100" value="50" class="ba-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize" aria-label="Glisser pour comparer avant et après" />
+          <!-- Slider handle draggable, focusable, clavier-friendly -->
+          <button type="button"
+                  class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg cursor-ew-resize touch-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-abtp-yellow/60"
+                  style="left: 50%; transform: translateX(-50%);"
+                  role="slider"
+                  aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                  aria-label="Glisser pour comparer avant et après"
+                  tabindex="0">
+            <span aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl pointer-events-none">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
+            </span>
+          </button>
           <!-- Badges -->
           <span class="absolute top-3 left-3 bg-abtp-charcoal/80 text-white text-[10px] font-mono px-2 py-1 rounded">AVANT</span>
           <span class="absolute top-3 right-3 bg-abtp-yellow text-abtp-charcoal text-[10px] font-mono px-2 py-1 rounded">APRÈS</span>
@@ -653,17 +868,49 @@
       <article class="before-after group rounded-lg border border-neutral-200 bg-white shadow-sm overflow-hidden">
         <div class="ba-wrap relative aspect-[4/3] bg-abtp-charcoal overflow-hidden">
           <div class="ba-before absolute inset-0">
-            <img src="photos/devant%20maison%20avant.jpg" alt="Devant de maison avant intervention ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <picture>
+              <source type="image/avif"
+                      srcset="assets/photos/facade-avant.avif 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <source type="image/webp"
+                      srcset="assets/photos/facade-avant-640.webp 640w,
+                              assets/photos/facade-avant-1024.webp 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <img src="assets/photos/facade-avant-1024.webp"
+                   alt="Devant de maison avant intervention ABTP"
+                   width="1024" height="772"
+                   class="absolute inset-0 w-full h-full object-cover"
+                   loading="lazy" decoding="async" />
+            </picture>
           </div>
           <div class="ba-after absolute inset-0" style="clip-path: inset(0 0 0 50%);">
-            <img src="photos/devant%20maison%20apr%C3%A8s.jpg" alt="Devant de maison après réalisation ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <picture>
+              <source type="image/avif"
+                      srcset="assets/photos/facade-apres.avif 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <source type="image/webp"
+                      srcset="assets/photos/facade-apres-640.webp 640w,
+                              assets/photos/facade-apres-1024.webp 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <img src="assets/photos/facade-apres-1024.webp"
+                   alt="Devant de maison après réalisation ABTP"
+                   width="1024" height="768"
+                   class="absolute inset-0 w-full h-full object-cover"
+                   loading="lazy" decoding="async" />
+            </picture>
           </div>
-          <div class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg pointer-events-none" style="left: 50%;">
-            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
-            </div>
-          </div>
-          <input type="range" min="0" max="100" value="50" class="ba-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize" aria-label="Glisser pour comparer avant et après" />
+          <!-- Slider handle draggable, focusable, clavier-friendly -->
+          <button type="button"
+                  class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg cursor-ew-resize touch-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-abtp-yellow/60"
+                  style="left: 50%; transform: translateX(-50%);"
+                  role="slider"
+                  aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                  aria-label="Glisser pour comparer avant et après"
+                  tabindex="0">
+            <span aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl pointer-events-none">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
+            </span>
+          </button>
           <span class="absolute top-3 left-3 bg-abtp-charcoal/80 text-white text-[10px] font-mono px-2 py-1 rounded">AVANT</span>
           <span class="absolute top-3 right-3 bg-abtp-yellow text-abtp-charcoal text-[10px] font-mono px-2 py-1 rounded">APRÈS</span>
         </div>
@@ -677,17 +924,49 @@
       <article class="before-after group rounded-lg border border-neutral-200 bg-white shadow-sm overflow-hidden">
         <div class="ba-wrap relative aspect-[4/3] bg-abtp-charcoal overflow-hidden">
           <div class="ba-before absolute inset-0">
-            <img src="photos/terrasse%20avant.jpg" alt="Terrasse avant intervention ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <picture>
+              <source type="image/avif"
+                      srcset="assets/photos/terrasse-avant.avif 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <source type="image/webp"
+                      srcset="assets/photos/terrasse-avant-640.webp 640w,
+                              assets/photos/terrasse-avant-1024.webp 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <img src="assets/photos/terrasse-avant-1024.webp"
+                   alt="Terrasse avant intervention ABTP"
+                   width="1024" height="1280"
+                   class="absolute inset-0 w-full h-full object-cover"
+                   loading="lazy" decoding="async" />
+            </picture>
           </div>
           <div class="ba-after absolute inset-0" style="clip-path: inset(0 0 0 50%);">
-            <img src="photos/terrasse%20apr%C3%A8s.jpg" alt="Terrasse après réalisation ABTP" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <picture>
+              <source type="image/avif"
+                      srcset="assets/photos/terrasse-apres.avif 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <source type="image/webp"
+                      srcset="assets/photos/terrasse-apres-640.webp 640w,
+                              assets/photos/terrasse-apres-1024.webp 1024w"
+                      sizes="(max-width: 768px) 100vw, 33vw" />
+              <img src="assets/photos/terrasse-apres-1024.webp"
+                   alt="Terrasse après réalisation ABTP"
+                   width="1024" height="1280"
+                   class="absolute inset-0 w-full h-full object-cover"
+                   loading="lazy" decoding="async" />
+            </picture>
           </div>
-          <div class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg pointer-events-none" style="left: 50%;">
-            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
-            </div>
-          </div>
-          <input type="range" min="0" max="100" value="50" class="ba-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize" aria-label="Glisser pour comparer avant et après" />
+          <!-- Slider handle draggable, focusable, clavier-friendly -->
+          <button type="button"
+                  class="ba-handle absolute top-0 bottom-0 w-1 bg-abtp-yellow shadow-lg cursor-ew-resize touch-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-abtp-yellow/60"
+                  style="left: 50%; transform: translateX(-50%);"
+                  role="slider"
+                  aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                  aria-label="Glisser pour comparer avant et après"
+                  tabindex="0">
+            <span aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-abtp-yellow border-2 border-abtp-charcoal flex items-center justify-center shadow-xl pointer-events-none">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(-6 0)"/></svg>
+            </span>
+          </button>
           <span class="absolute top-3 left-3 bg-abtp-charcoal/80 text-white text-[10px] font-mono px-2 py-1 rounded">AVANT</span>
           <span class="absolute top-3 right-3 bg-abtp-yellow text-abtp-charcoal text-[10px] font-mono px-2 py-1 rounded">APRÈS</span>
         </div>
@@ -988,7 +1267,13 @@
 
       <!-- Right column: form -->
       <div class="lg:col-span-7">
-        <form id="contact-form" class="rounded-lg bg-abtp-charcoal text-white p-6 md:p-8 shadow-xl">
+        <form id="contact-form"
+              action="https://formspree.io/f/TODO_CLIENT_FORMSPREE_ID"
+              method="POST"
+              class="rounded-lg bg-abtp-charcoal text-white p-6 md:p-8 shadow-xl">
+          <!-- TODO_CLIENT: FORMSPREE - remplacer FORMSPREE_ID dans action= apres creation du compte sur formspree.io -->
+          <input type="hidden" name="_subject" value="Demande de devis ABTP — site abtp77.fr" />
+          <input type="hidden" name="_language" value="fr" />
           <p class="font-display tracking-widest text-abtp-yellow text-sm mb-3">— Demande de devis</p>
           <h3 class="font-display text-2xl md:text-3xl mb-1">Décrivez votre projet.</h3>
           <p class="text-white/60 text-sm mb-6">Alexandre vous rappelle sous 1h ouvré.</p>
@@ -1038,6 +1323,19 @@
             </label>
           </div>
 
+          <!-- Consentement RGPD -->
+          <label class="mt-6 flex items-start gap-3 text-sm text-white/75 leading-relaxed cursor-pointer">
+            <input required type="checkbox" name="consent_rgpd" class="mt-1 w-4 h-4 accent-abtp-yellow flex-shrink-0" />
+            <span>
+              J'accepte que mes informations soient utilisées par ABTP pour me recontacter au sujet de mon projet, conformément à la
+              <a href="#confidentialite" class="underline decoration-abtp-yellow underline-offset-2">politique de confidentialité</a>.
+              <span class="text-abtp-yellow">*</span>
+            </span>
+          </label>
+
+          <!-- Honeypot anti-spam (caché aux humains, rempli par les bots) -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+
           <button type="submit" class="mt-6 cta-yellow w-full rounded-md font-display tracking-wider text-lg py-4 inline-flex items-center justify-center gap-2 shadow-lg">
             Envoyer ma demande
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -1045,8 +1343,8 @@
 
           <p id="form-status" class="mt-4 text-sm text-abtp-yellow hidden"></p>
 
-          <p class="mt-6 text-xs text-white/55 leading-relaxed">
-            Les informations transmises via ce formulaire sont utilisées uniquement pour vous recontacter au sujet de votre projet. Elles ne sont ni revendues, ni partagées. Vous pouvez demander leur suppression à tout moment en écrivant à <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a> (RGPD, art. 17).
+          <p class="mt-6 text-xs text-white/60 leading-relaxed">
+            <strong>Données personnelles.</strong> Les informations recueillies sont traitées par ABTP (SARL, 8 Square de Beauregard 77000 Melun) aux seules fins de répondre à votre demande de devis. Base légale : exécution de mesures précontractuelles à votre demande (art. 6.1.b RGPD). Destinataire unique : Alexandre Bossée, gérant. Conservation : 3 ans après le dernier contact pour les demandes sans suite, 10 ans pour les chantiers réalisés. Vous disposez des droits d'accès, rectification, effacement, limitation, opposition et portabilité, exerçables à <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a>, ainsi que du droit d'introduire une réclamation auprès de la <a class="underline decoration-abtp-yellow underline-offset-2" href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">CNIL</a>. <a href="#confidentialite" class="underline decoration-abtp-yellow underline-offset-2">En savoir plus</a>.
           </p>
         </form>
       </div>
@@ -1117,31 +1415,133 @@
         <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
       </summary>
       <div class="mt-4 grid md:grid-cols-2 gap-6 text-white/70 leading-relaxed">
+
         <div>
           <p class="text-white font-semibold mb-2">Éditeur du site</p>
-          <!-- TODO: remplacer {{CAPITAL}} après confirmation Alexandre -->
-          <p>ABTP — SARL au capital de {{CAPITAL}} €<br/>
-            8 Square de Beauregard, 77000 Melun<br/>
-            SIREN 940 605 652 · NAF 4312A<br/>
-            Directeur de la publication : Alexandre Bossée
+          <p>
+            ABTP — Société à responsabilité limitée (SARL)<br/>
+            <!-- TODO_CLIENT: CAPITAL -->Capital social : {{CAPITAL}} €<br/>
+            Siège social : 8 Square de Beauregard, 77000 Melun<br/>
+            SIREN : 940 605 652 — RCS Melun<br/>
+            Code APE/NAF : 4312A (Travaux de terrassement courants)<br/>
+            <!-- TODO_CLIENT: TVA -->N° TVA intracommunautaire : {{TVA_INTRACOM_OU_FRANCHISE}}<br/>
+            Téléphone : 07 82 40 88 09<br/>
+            Email : <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a><br/>
+            Directeur de la publication : Alexandre Bossée, gérant
           </p>
-          <p class="mt-4">
-            <!-- TODO: Hébergeur à compléter lors du déploiement -->
-            Hébergement : {{HEBERGEUR}}
+
+          <p class="text-white font-semibold mt-5 mb-2">Hébergeur</p>
+          <p>
+            <!-- TODO_CLIENT: HEBERGEUR -->{{HEBERGEUR_RAISON_SOCIALE}}<br/>
+            <!-- TODO_CLIENT: HEBERGEUR -->{{HEBERGEUR_ADRESSE}}<br/>
+            <!-- TODO_CLIENT: HEBERGEUR -->Téléphone : {{HEBERGEUR_TEL}}<br/>
+            <!-- TODO_CLIENT: HEBERGEUR -->Site : {{HEBERGEUR_URL}}
           </p>
-          <p class="mt-4">
-            <!-- TODO: Garantie décennale à compléter -->
-            Assurance décennale : {{COMPAGNIE_DECENNALE}} — Police n° {{N_POLICE}}
+
+          <p class="text-white font-semibold mt-5 mb-2">Assurances professionnelles</p>
+          <p>
+            <strong>Assurance responsabilité civile professionnelle et décennale</strong> (art. 1792 du Code civil, loi Spinetta du 4 janvier 1978) :<br/>
+            <!-- TODO_CLIENT: DECENNALE -->Compagnie : {{COMPAGNIE_DECENNALE}}<br/>
+            <!-- TODO_CLIENT: DECENNALE -->N° de police : {{N_POLICE}}<br/>
+            Couverture géographique : France métropolitaine<br/>
+            Activités garanties : terrassement, assainissement non collectif, voirie et réseaux divers, maçonnerie courante, aménagements extérieurs.
+          </p>
+          <p class="mt-2 text-xs text-white/60">
+            Les ouvrages réalisés bénéficient en outre de la garantie de parfait achèvement (1 an, art. 1792-6 du Code civil) et de la garantie biennale de bon fonctionnement sur les éléments d'équipement dissociables (2 ans, art. 1792-3).
           </p>
         </div>
+
         <div>
-          <p class="text-white font-semibold mb-2">Données personnelles</p>
+          <p class="text-white font-semibold mb-2">Médiation de la consommation</p>
           <p>
-            Les informations transmises via le formulaire de contact sont utilisées uniquement pour vous recontacter au sujet de votre projet. Elles ne sont ni revendues, ni partagées. Vous pouvez demander leur suppression à tout moment en écrivant à <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a> (RGPD, art. 17).
+            Conformément aux articles L. 612-1 et suivants du Code de la consommation, ABTP propose à ses clients consommateurs un dispositif de médiation de la consommation. Le médiateur compétent est :<br/>
+            <!-- TODO_CLIENT: MEDIATEUR --><strong>{{MEDIATEUR_NOM}}</strong><br/>
+            <!-- TODO_CLIENT: MEDIATEUR -->{{MEDIATEUR_ADRESSE}}<br/>
+            <!-- TODO_CLIENT: MEDIATEUR -->Site : <a class="underline decoration-abtp-yellow underline-offset-2" href="{{MEDIATEUR_URL}}" target="_blank" rel="noopener">{{MEDIATEUR_URL}}</a>
           </p>
-          <p class="mt-4 text-white font-semibold mb-2">Propriété intellectuelle</p>
+          <p class="mt-2 text-xs text-white/60">
+            Le consommateur peut saisir gratuitement le médiateur après avoir tenté de résoudre le litige directement avec ABTP par réclamation écrite. La plateforme européenne de règlement en ligne des litiges est également disponible : <a class="underline decoration-abtp-yellow underline-offset-2" href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.
+          </p>
+
+          <p class="text-white font-semibold mt-5 mb-2">Droit de rétractation</p>
           <p>
-            L'ensemble des contenus (textes, illustrations, code) est la propriété d'ABTP. Toute reproduction sans autorisation est interdite.
+            Pour tout devis signé hors de l'établissement d'ABTP (notamment à votre domicile), vous bénéficiez d'un droit de rétractation de <strong>14 jours calendaires</strong> à compter de la signature, conformément aux articles L. 221-18 et suivants du Code de la consommation. Un formulaire de rétractation type vous est remis avec chaque devis. Si vous souhaitez que les travaux démarrent avant la fin de ce délai, une demande expresse et écrite vous sera demandée ; vous perdez alors le droit de vous rétracter une fois la prestation pleinement exécutée.
+          </p>
+
+          <p class="text-white font-semibold mt-5 mb-2">Propriété intellectuelle</p>
+          <p>
+            L'ensemble des contenus du site (textes, photographies, illustrations, logo, code source) est la propriété exclusive d'ABTP, sauf mentions contraires. Toute reproduction, représentation, modification, publication, adaptation totale ou partielle est interdite sans autorisation écrite préalable, sous peine de constituer une contrefaçon au sens des articles L. 335-2 et suivants du Code de la propriété intellectuelle.
+          </p>
+        </div>
+      </div>
+    </details>
+
+    <!-- Politique de confidentialité (RGPD) -->
+    <details id="confidentialite" class="legal text-sm mt-4">
+      <summary class="flex items-center justify-between gap-3 cursor-pointer py-2">
+        <span class="font-display tracking-widest text-abtp-yellow">— Politique de confidentialité (RGPD)</span>
+        <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="mt-4 grid md:grid-cols-2 gap-6 text-white/70 leading-relaxed">
+
+        <div>
+          <p class="text-white font-semibold mb-2">Responsable de traitement</p>
+          <p>
+            ABTP — SARL, représentée par son gérant Alexandre Bossée<br/>
+            8 Square de Beauregard, 77000 Melun<br/>
+            <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a>
+          </p>
+          <p class="mt-2 text-xs text-white/60">
+            Compte tenu de l'effectif et de la nature des traitements (pas de traitement à grande échelle, pas de données sensibles), ABTP n'est pas tenue de désigner un délégué à la protection des données (DPO) au sens de l'article 37 du RGPD. Toute question relative à vos données peut être adressée directement au responsable de traitement à l'adresse ci-dessus.
+          </p>
+
+          <p class="text-white font-semibold mt-5 mb-2">Données collectées et finalités</p>
+          <p>
+            Via le formulaire de demande de devis, ABTP collecte : prénom, numéro de téléphone, commune, type de chantier, surface approximative, message libre. Les champs marqués d'un astérisque sont obligatoires ; les autres sont facultatifs.
+          </p>
+          <p class="mt-2">
+            <strong>Finalités</strong> : prise de contact, qualification du besoin, élaboration et envoi d'un devis, suivi commercial du projet. Aucune utilisation à des fins de prospection commerciale automatisée, aucune cession à des tiers.
+          </p>
+          <p class="mt-2">
+            <strong>Base légale</strong> : exécution de mesures précontractuelles prises à votre demande (article 6.1.b du RGPD).
+          </p>
+        </div>
+
+        <div>
+          <p class="text-white font-semibold mb-2">Destinataires</p>
+          <p>
+            Les données sont accessibles exclusivement par Alexandre Bossée, gérant d'ABTP. Aucun sous-traitant n'a accès aux données du formulaire ; aucun transfert hors de l'Union européenne n'est effectué.
+          </p>
+
+          <p class="text-white font-semibold mt-5 mb-2">Durée de conservation</p>
+          <p>
+            — Demandes sans suite : 3 ans à compter du dernier contact (recommandation CNIL prospection BtoC).<br/>
+            — Devis signés et chantiers réalisés : 10 ans à compter de la réception des travaux (durée de la garantie décennale, art. 1792 Code civil).<br/>
+            — Données comptables associées : 10 ans (art. L. 123-22 Code de commerce).
+          </p>
+
+          <p class="text-white font-semibold mt-5 mb-2">Vos droits</p>
+          <p>
+            Conformément au RGPD (articles 15 à 22) et à la loi Informatique et Libertés modifiée, vous disposez à tout moment des droits suivants sur vos données personnelles :
+          </p>
+          <ul class="list-disc list-inside mt-2 space-y-0.5">
+            <li>droit d'<strong>accès</strong> et droit d'obtenir une copie</li>
+            <li>droit de <strong>rectification</strong> si les données sont inexactes</li>
+            <li>droit à l'<strong>effacement</strong> (« droit à l'oubli »)</li>
+            <li>droit à la <strong>limitation</strong> du traitement</li>
+            <li>droit d'<strong>opposition</strong> au traitement</li>
+            <li>droit à la <strong>portabilité</strong> de vos données</li>
+          </ul>
+          <p class="mt-2">
+            Pour exercer ces droits, écrivez à <a class="underline decoration-abtp-yellow underline-offset-2" href="mailto:alexandre.bossee.abtp@gmail.com">alexandre.bossee.abtp@gmail.com</a> en précisant l'objet de votre demande. Une réponse vous sera apportée dans un délai d'un mois.
+          </p>
+          <p class="mt-2">
+            Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la <strong>CNIL</strong> : 3 place de Fontenoy — TSA 80715 — 75334 Paris Cedex 07 — <a class="underline decoration-abtp-yellow underline-offset-2" href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">www.cnil.fr/fr/plaintes</a>.
+          </p>
+
+          <p class="text-white font-semibold mt-5 mb-2">Cookies et traceurs</p>
+          <p>
+            Le site ABTP n'utilise <strong>aucun cookie de mesure d'audience, aucun cookie publicitaire et aucun traceur tiers</strong>. Seuls les cookies strictement nécessaires au fonctionnement du site peuvent être déposés (aucun à ce jour). Les polices d'écriture et frameworks CSS utilisés sont hébergés sur le même domaine que le site ; aucun appel à un service tiers (Google Fonts, CDN, analytics) n'est effectué sans votre consentement explicite.
           </p>
         </div>
       </div>
@@ -1150,7 +1550,7 @@
     <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-white/50">
       <p>
         <a href="#mentions" class="hover:text-white">Mentions légales</a> ·
-        <a href="#mentions" class="hover:text-white">Politique de confidentialité</a> ·
+        <a href="#confidentialite" class="hover:text-white">Politique de confidentialité</a> ·
         <span>CGV à venir</span>
       </p>
       <p>© 2026 ABTP — Tous droits réservés.</p>
@@ -1334,7 +1734,7 @@
   function bennesSVG(items){
     // items = array of {size:30|15|8, fillRatio:0..1}
     if (!items.length){
-      return `<p class="text-white/40 text-sm font-mono py-6 text-center">Sélectionnez un volume pour visualiser les bennes</p>`;
+      return `<p class="text-white/55 text-sm font-mono py-6 text-center">Sélectionnez un volume pour visualiser les bennes</p>`;
     }
     const widths = { 30: 180, 15: 130, 8: 90 };
     const heights= { 30: 100, 15: 80,  8: 60 };
@@ -1491,26 +1891,74 @@
     $('#estimation-summary-text').textContent = '';
   });
 
-  // ---- Form submit (demo : compose mailto) ----
-  $('#contact-form').addEventListener('submit', (e) => {
+  // ---- Form submit (Formspree fetch + etat merci pleine carte) ----
+  $('#contact-form').addEventListener('submit', async (e) => {
     e.preventDefault();
-    const fd = new FormData(e.target);
-    const obj = Object.fromEntries(fd.entries());
-    const body = [
-      `Prénom : ${obj.prenom}`,
-      `Téléphone : ${obj.telephone}`,
-      `Commune : ${obj.commune}`,
-      `Type de chantier : ${obj.type}`,
-      obj.surface ? `Surface : ${obj.surface} m²` : null,
-      '',
-      'Message :',
-      obj.message || '(aucun)',
-    ].filter(Boolean).join('\n');
-    const mailto = `mailto:alexandre.bossee.abtp@gmail.com?subject=${encodeURIComponent('Demande de devis ABTP — ' + (obj.prenom || ''))}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
+    const form = e.target;
     const status = $('#form-status');
-    status.textContent = 'Votre client mail s\'ouvre pour finaliser l\'envoi. Sinon, appelez le 07 82 40 88 09.';
-    status.classList.remove('hidden');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const fd = new FormData(form);
+
+    // 1. Anti-spam : honeypot rempli = bot, on simule un succes silencieux
+    if ((fd.get('website') || '').toString().length > 0) {
+      form.innerHTML = '<p class="text-white/70 text-sm text-center py-8">Demande envoyée. Merci !</p>';
+      return;
+    }
+
+    // 2. Verification consentement RGPD (defense en profondeur, le required HTML5 le bloque deja)
+    if (!fd.get('consent_rgpd')) {
+      status.textContent = "Merci de cocher la case d'acceptation pour envoyer votre demande.";
+      status.classList.remove('hidden');
+      return;
+    }
+
+    // 3. Etat "envoi en cours"
+    const originalLabel = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Envoi en cours…';
+    status.classList.add('hidden');
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: fd,
+        headers: { 'Accept': 'application/json' },
+      });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+
+      // 4. Etat "merci" pleine carte : remplace le formulaire
+      form.innerHTML = `
+        <div class="text-center py-8">
+          <div class="w-16 h-16 rounded-full bg-abtp-yellow flex items-center justify-center mx-auto mb-4">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3 class="font-display text-3xl text-white mb-3">Demande reçue.</h3>
+          <p class="text-white/80 mb-6 max-w-md mx-auto">
+            Alexandre vous rappelle <strong class="text-abtp-yellow">sous 1h ouvré</strong>.
+            En attendant, vous pouvez l'appeler directement ou continuer sur WhatsApp.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="tel:0782408809" class="cta-yellow rounded-md font-semibold px-6 py-3 inline-flex items-center justify-center gap-2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+              Appeler maintenant
+            </a>
+            <a href="https://wa.me/33782408809?text=${encodeURIComponent("Bonjour Alexandre, je viens de faire une demande de devis via le site.")}"
+               class="rounded-md px-6 py-3 inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01A7.94 7.94 0 0 0 17.6 6.32z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      `;
+      // Tracking placeholder (Plausible installe en P1-2)
+      if (window.plausible) window.plausible('soumet_formulaire');
+    } catch (err) {
+      // 5. Fallback en cas d'erreur reseau / Formspree down
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalLabel;
+      status.innerHTML = "Désolé, un problème est survenu. Appelez-nous directement au <a class='underline' href='tel:0782408809'>07 82 40 88 09</a>.";
+      status.classList.remove('hidden');
+    }
   });
 
   // ---- Scrollspy ----
@@ -1533,17 +1981,59 @@
 <script>
 (() => {
   document.querySelectorAll('.before-after').forEach(card => {
-    const range  = card.querySelector('.ba-range');
+    const wrap   = card.querySelector('.ba-wrap');
     const after  = card.querySelector('.ba-after');
     const handle = card.querySelector('.ba-handle');
-    if (!range || !after || !handle) return;
-    const update = () => {
-      const v = range.value; // 0 to 100
-      after.style.clipPath = `inset(0 0 0 ${v}%)`;
-      handle.style.left = `${v}%`;
+    if (!wrap || !after || !handle) return;
+
+    let pct = 50;
+    const set = (v) => {
+      pct = Math.max(0, Math.min(100, v));
+      after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+      handle.style.left = `${pct}%`;
+      handle.setAttribute('aria-valuenow', Math.round(pct));
     };
-    range.addEventListener('input', update);
-    update();
+
+    const onMove = (clientX) => {
+      const rect = wrap.getBoundingClientRect();
+      const v = ((clientX - rect.left) / rect.width) * 100;
+      set(v);
+    };
+
+    // Pointer events (touch + souris + stylet)
+    let dragging = false;
+    handle.addEventListener('pointerdown', (e) => {
+      dragging = true;
+      handle.setPointerCapture?.(e.pointerId);
+      e.preventDefault();
+    });
+    handle.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      onMove(e.clientX);
+    });
+    const endDrag = (e) => {
+      dragging = false;
+      handle.releasePointerCapture?.(e.pointerId);
+    };
+    handle.addEventListener('pointerup', endDrag);
+    handle.addEventListener('pointercancel', endDrag);
+
+    // Clavier : flèches (2%), Shift+flèches (10%), Home / End
+    handle.addEventListener('keydown', (e) => {
+      const step = e.shiftKey ? 10 : 2;
+      if (e.key === 'ArrowLeft')  { set(pct - step); e.preventDefault(); }
+      if (e.key === 'ArrowRight') { set(pct + step); e.preventDefault(); }
+      if (e.key === 'Home')       { set(0);          e.preventDefault(); }
+      if (e.key === 'End')        { set(100);        e.preventDefault(); }
+    });
+
+    // Tap simple sur la zone : positionne le handle (sans entrer en drag)
+    wrap.addEventListener('click', (e) => {
+      if (e.target.closest('.ba-handle')) return; // evite double event
+      onMove(e.clientX);
+    });
+
+    set(50);
   });
 })();
 </script>
